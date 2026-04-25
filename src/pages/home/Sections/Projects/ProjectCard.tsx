@@ -1,15 +1,15 @@
 import { ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
-  title: string;
-  description: string;
-  technologies: string[];
-  image: string;
-  url: string;
-  index: number;
-  className?: string;
-  onMouseEnter?: () => void;
-  onMouseLeave?: () => void;
+  readonly title: string;
+  readonly description: string;
+  readonly technologies: readonly string[];
+  readonly image: string;
+  readonly url: string;
+  readonly index: number;
+  readonly className?: string;
+  readonly onMouseEnter?: () => void;
+  readonly onMouseLeave?: () => void;
 }
 
 export default function ProjectCard({
@@ -40,8 +40,8 @@ export default function ProjectCard({
       </span>
       <div className="project-card__content">
         <div className="project-card__tech-row">
-          {technologies.slice(0, 3).map((tech, i) => (
-            <span key={i} className="project-card__tech">
+          {technologies.slice(0, 3).map((tech) => (
+            <span key={tech} className="project-card__tech">
               {tech}
             </span>
           ))}
