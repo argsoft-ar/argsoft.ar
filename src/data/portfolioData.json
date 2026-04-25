@@ -1,0 +1,120 @@
+{
+  "es": [
+    {
+      "id": 1,
+      "title": "Booking-Bot",
+      "description": "Desarrollo de un bot de reservas para WhatsApp con integración de inteligencia artificial.",
+      "technologies": [
+        "React",
+        "CSS",
+        "TypeScript",
+        "Firebase",
+        "Node.js",
+        "OpenAI",
+        "DialogFlow",
+        "APIs REST"
+      ],
+      "image": "https://res.cloudinary.com/dxl9cojcx/image/upload/v1762190103/Captura_de_pantalla_2025-11-03_141358_ohiylm.png",
+      "url": "https://booking-bot-wpp.web.app/"
+    },
+    {
+      "id": 2,
+      "title": "Hooligang Cuts",
+      "description": "Diseño y desarrollo web para una barbería, con la implementación de un sistema de programación de turnos a través de Cal.com para gestión de citas.",
+      "technologies": ["HTML", "SASS", "JavaScript"],
+      "image": "https://res.cloudinary.com/deamcrkgb/image/upload/v1745879400/Hooligang_g1b976.png",
+      "url": "https://hooligangcuts.netlify.app/"
+    },
+    {
+      "id": 3,
+      "title": "Campo Fertil",
+      "description": "Diseño y desarrollo web para Campo Fértil S.R.L, una empresa agroindustrial líder en producción de granos, venta de agroquímicos y servicios agrícolas.",
+      "technologies": ["React.js", "CSS", "Vite", "JSON"],
+      "image": "https://res.cloudinary.com/deamcrkgb/image/upload/v1749693480/campo_fertil_ahl3lw.webp",
+      "url": "https://campofertilreact.netlify.app/"
+    },
+
+    {
+      "id": 4,
+      "title": "Mikem'Store",
+      "description": "Mi primer proyecto de desarrollo web, creado como parte del curso de desarrollo web de CoderHouse.",
+      "technologies": ["HTML", "SASS", "Bootstrap"],
+      "image": "https://res.cloudinary.com/deamcrkgb/image/upload/v1745879791/mikemstore_gbnduf.png",
+      "url": "https://mikemstore.netlify.app/"
+    },
+    {
+      "id": 5,
+      "title": "Sneaker Solid",
+      "description": "Tienda E-Commerce, desarrollada para el curso de JavaScript en CoderHouse.",
+      "technologies": ["HTML", "SASS", "JavaScript", "JSON", "Bootstrap"],
+      "image": "https://res.cloudinary.com/deamcrkgb/image/upload/v1745879360/Captura_de_pantalla_2025-03-21_153507_z124ib.png",
+      "url": "https://sneakersolid.netlify.app/"
+    }
+  ],
+  "en": [
+    {
+      "id": 1,
+      "title": "Booking-Bot",
+      "description": "Development of a booking bot for WhatsApp with artificial intelligence integration.",
+      "technologies": [
+        "React",
+        "CSS",
+        "TypeScript",
+        "Firebase",
+        "Node.js",
+        "OpenAI",
+        "DialogFlow",
+        "APIs REST"
+      ],
+      "image": "https://res.cloudinary.com/dxl9cojcx/image/upload/v1762190103/Captura_de_pantalla_2025-11-03_141358_ohiylm.png",
+      "url": "https://booking-bot-wpp.web.app/"
+    },
+    {
+      "id": 2,
+      "title": "Hooligang Cuts",
+      "description": "Design and web development for a barber shop, including an appointment scheduling system using Cal.com.",
+      "technologies": ["HTML", "SASS", "JavaScript"],
+      "image": "https://res.cloudinary.com/deamcrkgb/image/upload/v1745879400/Hooligang_g1b976.png",
+      "url": "https://hooligangcuts.netlify.app/"
+    },
+    {
+      "id": 3,
+      "title": "Campo Fertil",
+      "description": "Design and web development for Campo Fértil S.R.L, a leading agro-industrial company in grain production, agrochemical sales, and agricultural services.",
+      "technologies": ["React.js", "CSS", "Vite", "JSON"],
+      "image": "https://res.cloudinary.com/deamcrkgb/image/upload/v1749693480/campo_fertil_ahl3lw.webp",
+      "url": "https://campofertilreact.netlify.app/"
+    },
+    {
+      "id": 4,
+      "title": "Andes Polygon",
+      "description": "Landing page design for a web development Start-Up, collaborating to deliver innovative and high-quality solutions.",
+      "technologies": [
+        "React.js",
+        "Tailwind CSS",
+        "PHP",
+        "Node.js",
+        "JSON",
+        "ViteJS"
+      ],
+      "image": "https://res.cloudinary.com/deamcrkgb/image/upload/v1749400519/AndesPolygon_ckl1og.jpg",
+      "url": "https://andespolygon.netlify.app/"
+    },
+    {
+      "id": 5,
+      "title": "Mikem'Store",
+      "description": "My first web development project, created as part of the web development course at CoderHouse.",
+      "technologies": ["HTML", "SASS", "Bootstrap"],
+      "image": "https://res.cloudinary.com/deamcrkgb/image/upload/v1745879791/mikemstore_gbnduf.png",
+      "url": "https://mikemstore.netlify.app/"
+    },
+    {
+      "id": 6,
+      "title": "Sneaker Solid",
+      "description": "E-Commerce store, developed for the JavaScript course at CoderHouse.",
+      "technologies": ["HTML", "SASS", "JavaScript", "JSON", "Bootstrap"],
+      "image": "https://res.cloudinary.com/deamcrkgb/image/upload/v1745879360/Captura_de_pantalla_2025-03-21_153507_z124ib.png",
+      "url": "https://sneakersolid.netlify.app/"
+    }
+  ]
+}

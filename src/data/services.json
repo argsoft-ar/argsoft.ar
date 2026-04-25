@@ -1,0 +1,22 @@
+{
+  "services": [
+    {
+      "icon": "Globe",
+      "title": "Sitios Web para PyMEs",
+      "description": "Diseño y desarrollo de páginas web profesionales para tu negocio. Mostrá tus servicios, llegá a más clientes y posicioná tu marca en internet.",
+      "items": ["Sitios Web Corporativos", "Landing Pages", "Diseño Responsive"]
+    },
+    {
+      "icon": "Calendar",
+      "title": "Sistemas de Turnos y Reservas",
+      "description": "Integramos sistemas de agendamiento online para que tus clientes reserven turnos fácilmente. Ideal para barberías, consultorios, estudios y más.",
+      "items": ["Integración con API", "Gestión de Citas Online"]
+    },
+    {
+      "icon": "Bot",
+      "title": "Chatbots con IA para WhatsApp",
+      "description": "Automatizá la atención al cliente con bots inteligentes para WhatsApp. Respondé consultas, tomá reservas y mejorá la experiencia de tus clientes 24/7.",
+      "items": ["Bots de Reservas", "Atención Automatizada con IA"]
+    }
+  ]
+}

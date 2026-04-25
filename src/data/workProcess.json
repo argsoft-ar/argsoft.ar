@@ -1,0 +1,28 @@
+{
+  "steps": [
+    {
+      "id": 1,
+      "number": "01",
+      "title": "Descubrimiento",
+      "description": "Analizamos tus objetivos, audiencia y requisitos técnicos."
+    },
+    {
+      "id": 2,
+      "number": "02",
+      "title": "Diseño",
+      "description": "Creamos wireframes y prototipos UI de alta fidelidad para aprobación."
+    },
+    {
+      "id": 3,
+      "number": "03",
+      "title": "Desarrollo",
+      "description": "Código limpio con actualizaciones regulares y demos funcionales."
+    },
+    {
+      "id": 4,
+      "number": "04",
+      "title": "Despliegue",
+      "description": "Testing, lanzamiento final y soporte post-lanzamiento continuo."
+    }
+  ]
+}

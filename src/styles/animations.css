@@ -1,0 +1,108 @@
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Base hidden state */
+.anim-hidden {
+  opacity: 0;
+}
+
+/* Trigger classes (applied when inView = true) */
+.anim-fade-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.anim-fade-down {
+  animation: fadeInDown 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.anim-fade-left {
+  animation: fadeInLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.anim-fade-right {
+  animation: fadeInRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.anim-fade-in {
+  animation: fadeIn 0.7s ease both;
+}
+.anim-scale-in {
+  animation: scaleIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Stagger delays */
+.anim-delay-1 {
+  animation-delay: 0.1s;
+}
+.anim-delay-2 {
+  animation-delay: 0.2s;
+}
+.anim-delay-3 {
+  animation-delay: 0.3s;
+}
+.anim-delay-4 {
+  animation-delay: 0.4s;
+}
+.anim-delay-5 {
+  animation-delay: 0.5s;
+}
+.anim-delay-6 {
+  animation-delay: 0.6s;
+}

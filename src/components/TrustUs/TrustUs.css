@@ -1,0 +1,158 @@
+.trust-us-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  background-color: var(--background-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.trust-us-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.trust-us-subtitle {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+
+/* Marquee container */
+.trust-us-marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.trust-us-marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.trust-us-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.trust-us-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 60px;
+  min-height: 100px;
+}
+
+.trust-us-logo-img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.55;
+  filter: grayscale(100%);
+  transition:
+    opacity 0.3s ease,
+    filter 0.3s ease;
+}
+
+.trust-us-logo-item:hover .trust-us-logo-img {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.trust-us-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trust-us-subtitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  opacity: 0.5;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* Desktop logos */
+.trust-us-logos-desktop {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+/* Mobile logos */
+.trust-us-logos-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.trust-us-logos-mobile.fade-out {
+  opacity: 0;
+}
+
+.trust-us-logos-mobile.fade-in {
+  opacity: 1;
+}
+
+.trust-us-logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+}
+
+.trust-us-logo-img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+}
+
+.trust-us-logo-item:hover .trust-us-logo-img {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+@media (min-width: 768px) {
+  .trust-us-logos-desktop {
+    display: flex;
+  }
+
+  .trust-us-logos-mobile {
+    display: none;
+  }
+
+  .trust-us-logo-item {
+    gap: 50px;
+  }
+
+  .trust-us-logo-img {
+    width: 200px;
+    height: auto;
+  }
+}
