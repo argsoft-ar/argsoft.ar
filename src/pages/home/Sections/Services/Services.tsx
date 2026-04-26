@@ -25,7 +25,7 @@ export default function Services() {
         <div className="cards-container">
           {servicesData.services.map((service, index) => (
             <div
-              key={index}
+              key={service.title}
               className={
                 inView
                   ? `anim-scale-in anim-delay-${Math.min(index + 1, 5)}`

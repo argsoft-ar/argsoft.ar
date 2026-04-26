@@ -1,4 +1,4 @@
- import { Globe, Calendar, Bot, type LucideIcon, DotIcon } from "lucide-react";
+import { Globe, Calendar, Bot, type LucideIcon, DotIcon } from "lucide-react";
 import "./Cards.css";
 
 const iconMap: Record<string, LucideIcon> = {
@@ -26,8 +26,8 @@ export default function Cards({ icon, title, description, items }: CardsProps) {
       <p className="card-description">{description}</p>
       {items && items.length > 0 && (
         <ul className="card-items">
-          {items.map((item, index) => (
-            <li className="item" key={index}>
+          {items.map((item) => (
+            <li className="item" key={item}>
               <DotIcon /> {item}
             </li>
           ))}

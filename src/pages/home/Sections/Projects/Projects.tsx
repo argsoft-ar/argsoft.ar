@@ -140,9 +140,9 @@ export default function Projects() {
               {String(projects.length).padStart(2, "0")}
             </span>
             <div className="projects-dots">
-              {projects.map((_, index) => (
+              {projects.map((project, index) => (
                 <button
-                  key={index}
+                  key={project.id}
                   type="button"
                   className={`projects-dot${activeIndex === index ? " projects-dot--active" : ""}`}
                   onClick={() => scrollToCard(index)}

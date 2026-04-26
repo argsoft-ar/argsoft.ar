@@ -27,8 +27,8 @@ export default function ImageCard({
         <h3 className="image-card-title">{title}</h3>
         <p className="image-card-description">{description}</p>
         <div className="image-card-technologies">
-          {technologies.slice(0, 4).map((tech, index) => (
-            <span key={index} className="image-card-tech">
+          {technologies.slice(0, 4).map((tech) => (
+            <span key={tech} className="image-card-tech">
               {tech}
             </span>
           ))}

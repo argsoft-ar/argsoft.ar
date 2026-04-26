@@ -151,7 +151,7 @@ export default function ElementBg() {
 
   return (
     <div className="el-bg" ref={containerRef} aria-hidden="true">
-      {BG_ELEMENTS.map((el, i) => {
+      {BG_ELEMENTS.map((el) => {
         const tx = offset.x * el.parallaxFactor;
         const ty = offset.y * el.parallaxFactor;
         const parallaxStyle: React.CSSProperties =
@@ -164,7 +164,7 @@ export default function ElementBg() {
 
         return (
           <span
-            key={i}
+            key={el.className}
             className={el.className}
             style={{ ...parallaxStyle, ...el.style }}
           />

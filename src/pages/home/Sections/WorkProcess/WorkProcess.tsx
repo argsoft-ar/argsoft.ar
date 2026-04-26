@@ -78,9 +78,9 @@ export default function WorkProcess() {
           <h3 className="step-title">{steps[activeStep].title}</h3>
           <p className="step-description">{steps[activeStep].description}</p>
           <div className="process-dots">
-            {steps.map((_, index) => (
+            {steps.map((step, index) => (
               <button
-                key={index}
+                key={step.id}
                 className={`process-dot${activeStep === index ? " active" : ""}`}
                 onClick={() => handleDotClick(index)}
                 aria-label={`Paso ${index + 1}`}
