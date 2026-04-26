@@ -4,20 +4,14 @@ import "./Hero.css";
 import Button from "../../../../components/Buttons/Button";
 import { ArrowRight, Dot, User } from "lucide-react";
 import { useInView } from "../../../../hooks/useInView";
+import ElementBg from "../../../../components/ElementBg/ElementBg";
 
 export default function Hero() {
   const { ref, inView } = useInView();
 
   return (
     <div className="container-hero-section" id="inicio">
-      <div className="hero-bg-elements" aria-hidden="true">
-        <span className="bg-grid" />
-        <span className="bg-orb bg-orb-left" />
-        <span className="bg-orb bg-orb-right" />
-        <span className="bg-ring bg-ring-top" />
-        <span className="bg-ring bg-ring-bottom" />
-        <span className="bg-diamond" />
-      </div>
+      <ElementBg />
       <div
         className="hero-content"
         ref={ref as React.RefObject<HTMLDivElement>}

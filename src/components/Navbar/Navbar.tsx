@@ -93,7 +93,7 @@ export default function Navbar() {
         )}
 
         <div className={`navbar-mobile-menu${menuOpen ? " open" : ""}`}>
-          <div className="navbar-mobile-menu-bg">
+          <div className="navbar-mobile-menu-header">
             <button
               className="navbar-mobile-close"
               onClick={() => setMenuOpen(false)}
@@ -112,6 +112,22 @@ export default function Navbar() {
                 {label}
               </a>
             ))}
+          </div>
+          <div className="navbar-mobile-menu-footer">
+            <ThemeSwitcher />
+            <Button
+              text="Contactános"
+              icon={PhoneIcon}
+              className="navbar-mobile-cta"
+              action={{
+                type: "custom",
+                onClick: () => {
+                  setMenuOpen(false);
+                  const el = document.getElementById("contacto");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                },
+              }}
+            />
           </div>
         </div>
       </div>
