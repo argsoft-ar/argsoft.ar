@@ -1,0 +1,441 @@
+/* =========================================================
+   ElementBg — Interactive parallax background elements
+   ========================================================= */
+
+.el-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.el-bg > span {
+  position: absolute;
+  will-change: transform;
+}
+
+/* Parallax offset applied via CSS custom properties set inline */
+.el-bg > span:not(.el-bg-grid) {
+  transform: translate(var(--px-x, 0), var(--px-y, 0));
+  transition: transform 0.15s ease-out;
+}
+
+/* ----- Grid ----- */
+.el-bg-grid {
+  inset: 6% 8%;
+  border: 1px dashed color-mix(in srgb, var(--text-color) 28%, transparent);
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in srgb, var(--text-color) 12%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--text-color) 12%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 36px 36px;
+  opacity: 0.2;
+  animation: elGridDrift 18s linear infinite;
+}
+
+/* ----- Orbs ----- */
+.el-bg-orb {
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: elFloat 8s ease-in-out infinite;
+}
+
+.el-bg-orb--left {
+  width: 220px;
+  height: 220px;
+  left: -70px;
+  top: 18%;
+  background: radial-gradient(
+    circle,
+    var(--secondary-color) 0%,
+    transparent 70%
+  );
+  opacity: 0.32;
+}
+
+.el-bg-orb--right {
+  width: 280px;
+  height: 280px;
+  right: -80px;
+  bottom: 12%;
+  background: radial-gradient(circle, var(--accent-amber) 0%, transparent 72%);
+  opacity: 0.28;
+  animation-delay: 1.8s;
+}
+
+.el-bg-orb--center {
+  width: 160px;
+  height: 160px;
+  left: 50%;
+  top: 55%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--secondary-color) 60%, transparent) 0%,
+    transparent 70%
+  );
+  opacity: 0.18;
+  animation-delay: 3s;
+}
+
+/* ----- Rings ----- */
+.el-bg-ring {
+  border: 2px solid color-mix(in srgb, var(--text-color) 30%, transparent);
+  border-radius: 999px;
+  opacity: 0.45;
+  animation: elRingPulse 6.5s ease-in-out infinite;
+}
+
+.el-bg-ring--top {
+  width: 180px;
+  height: 180px;
+  top: 8%;
+  left: 26%;
+  animation-delay: 0.5s;
+}
+
+.el-bg-ring--bottom {
+  width: 140px;
+  height: 140px;
+  right: 20%;
+  bottom: 10%;
+  animation-delay: 1.2s;
+}
+
+.el-bg-ring--mid {
+  width: 100px;
+  height: 100px;
+  left: 62%;
+  top: 38%;
+  border-style: dashed;
+  opacity: 0.25;
+  animation-delay: 2.4s;
+}
+
+/* ----- Diamonds ----- */
+.el-bg-diamond {
+  background-color: color-mix(in srgb, var(--secondary-color) 20%, transparent);
+  border: 2px solid color-mix(in srgb, var(--text-color) 32%, transparent);
+  animation: elDiamondOrbit 9s ease-in-out infinite;
+}
+
+.el-bg-diamond--a {
+  width: 84px;
+  height: 84px;
+  right: 9%;
+  top: 20%;
+}
+
+.el-bg-diamond--b {
+  width: 48px;
+  height: 48px;
+  left: 12%;
+  bottom: 18%;
+  opacity: 0.35;
+  animation-delay: 3s;
+  animation-duration: 11s;
+}
+
+/* ----- Crosses ----- */
+.el-bg-cross {
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+  animation: elCrossSpin 12s linear infinite;
+}
+
+.el-bg-cross::before,
+.el-bg-cross::after {
+  content: "";
+  position: absolute;
+  background-color: color-mix(in srgb, var(--text-color) 45%, transparent);
+}
+
+.el-bg-cross::before {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.el-bg-cross::after {
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.el-bg-cross--a {
+  top: 14%;
+  right: 28%;
+}
+
+.el-bg-cross--b {
+  bottom: 22%;
+  left: 18%;
+  width: 16px;
+  height: 16px;
+  animation-delay: 4s;
+  animation-direction: reverse;
+}
+
+.el-bg-cross--c {
+  top: 60%;
+  right: 14%;
+  width: 14px;
+  height: 14px;
+  opacity: 0.22;
+  animation-delay: 7s;
+}
+
+/* ----- Dots ----- */
+.el-bg-dot {
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--secondary-color) 50%, transparent);
+  animation: elDotBlink 4s ease-in-out infinite;
+}
+
+.el-bg-dot--a {
+  width: 8px;
+  height: 8px;
+  top: 26%;
+  left: 38%;
+  opacity: 0.4;
+}
+
+.el-bg-dot--b {
+  width: 6px;
+  height: 6px;
+  bottom: 30%;
+  right: 32%;
+  opacity: 0.35;
+  animation-delay: 1s;
+}
+
+.el-bg-dot--c {
+  width: 10px;
+  height: 10px;
+  top: 70%;
+  left: 22%;
+  opacity: 0.3;
+  animation-delay: 2.2s;
+}
+
+.el-bg-dot--d {
+  width: 12px;
+  height: 12px;
+  top: 10%;
+  right: 42%;
+  opacity: 0.25;
+  animation-delay: 3.4s;
+}
+
+/* ----- Lines ----- */
+.el-bg-line {
+  height: 2px;
+  background-color: color-mix(in srgb, var(--text-color) 25%, transparent);
+  animation: elLineDrift 10s ease-in-out infinite;
+}
+
+.el-bg-line--a {
+  width: 60px;
+  top: 44%;
+  left: 8%;
+  transform-origin: left center;
+  rotate: -20deg;
+}
+
+.el-bg-line--b {
+  width: 45px;
+  bottom: 34%;
+  right: 10%;
+  border-top: 2px dashed color-mix(in srgb, var(--text-color) 22%, transparent);
+  background: none;
+  rotate: 15deg;
+  animation-delay: 5s;
+}
+
+/* ----- Brackets ----- */
+.el-bg-bracket {
+  width: 24px;
+  height: 40px;
+  opacity: 0.22;
+  animation: elFloat 7s ease-in-out infinite;
+}
+
+.el-bg-bracket::before,
+.el-bg-bracket::after {
+  content: "";
+  position: absolute;
+  background-color: color-mix(in srgb, var(--text-color) 40%, transparent);
+}
+
+/* Left bracket  <  shape */
+.el-bg-bracket--a {
+  top: 34%;
+  left: 5%;
+  animation-delay: 1.5s;
+}
+
+.el-bg-bracket--a::before {
+  width: 2px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.el-bg-bracket--a::after {
+  width: 10px;
+  height: 2px;
+  left: 0;
+  top: 0;
+}
+
+/* Right bracket  >  shape */
+.el-bg-bracket--b {
+  bottom: 16%;
+  right: 6%;
+  animation-delay: 3.5s;
+}
+
+.el-bg-bracket--b::before {
+  width: 2px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+
+.el-bg-bracket--b::after {
+  width: 10px;
+  height: 2px;
+  right: 0;
+  bottom: 0;
+}
+
+/* ==========================
+   Keyframes
+   ========================== */
+
+@keyframes elFloat {
+  0%,
+  100% {
+    transform: translate(var(--px-x, 0), var(--px-y, 0)) translateY(0);
+  }
+  50% {
+    transform: translate(var(--px-x, 0), var(--px-y, 0)) translateY(-14px);
+  }
+}
+
+@keyframes elGridDrift {
+  0% {
+    background-position:
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      36px 18px,
+      18px 36px;
+  }
+}
+
+@keyframes elRingPulse {
+  0%,
+  100% {
+    transform: translate(var(--px-x, 0), var(--px-y, 0)) scale(1) rotate(0deg);
+    opacity: 0.38;
+  }
+  50% {
+    transform: translate(var(--px-x, 0), var(--px-y, 0)) scale(1.08)
+      rotate(8deg);
+    opacity: 0.58;
+  }
+}
+
+@keyframes elDiamondOrbit {
+  0%,
+  100% {
+    transform: translate(var(--px-x, 0), var(--px-y, 0)) rotate(45deg);
+  }
+  35% {
+    transform: translate(
+        calc(var(--px-x, 0) - 10px),
+        calc(var(--px-y, 0) - 14px)
+      )
+      rotate(64deg);
+  }
+  70% {
+    transform: translate(
+        calc(var(--px-x, 0) + 10px),
+        calc(var(--px-y, 0) + 10px)
+      )
+      rotate(30deg);
+  }
+}
+
+@keyframes elCrossSpin {
+  0% {
+    transform: translate(var(--px-x, 0), var(--px-y, 0)) rotate(0deg);
+  }
+  100% {
+    transform: translate(var(--px-x, 0), var(--px-y, 0)) rotate(360deg);
+  }
+}
+
+@keyframes elDotBlink {
+  0%,
+  100% {
+    transform: translate(var(--px-x, 0), var(--px-y, 0)) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate(var(--px-x, 0), var(--px-y, 0)) scale(1.6);
+    opacity: 0.55;
+  }
+}
+
+@keyframes elLineDrift {
+  0%,
+  100% {
+    transform: translate(var(--px-x, 0), var(--px-y, 0)) scaleX(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(var(--px-x, 0), var(--px-y, 0)) scaleX(1.3);
+    opacity: 0.4;
+  }
+}
+
+/* ==========================
+   Reduced motion
+   ========================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .el-bg > span {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ==========================
+   Responsive adjustments
+   ========================== */
+
+@media (min-width: 768px) {
+  .el-bg-grid {
+    inset: 8% 10%;
+  }
+
+  .el-bg-ring--top {
+    left: 34%;
+  }
+}

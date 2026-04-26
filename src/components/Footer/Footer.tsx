@@ -12,15 +12,15 @@ const navLinks = [
 const socialLinks = [
   {
     label: "Instagram",
-    href: "https://instagram.com/gauchoinnova",
+    href: "https://instagram.com/argsoft.ar",
     Icon: FaInstagram,
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/miguelmiguez/",
+    href: "https://linkedin.com/in/argsoft-ar/",
     Icon: FaLinkedinIn,
   },
-  { label: "GitHub", href: "https://github.com/gauchoinnova", Icon: FaGithub },
+  { label: "GitHub", href: "https://github.com/argsoft-ar", Icon: FaGithub },
 ];
 
 export default function Footer() {
@@ -55,21 +55,8 @@ export default function Footer() {
           <p className="footer-col-label">Contacto</p>
           <ul className="footer-col-links">
             <li>
-              <a
-                href="mailto:miguelmiguezangel@gmail.com"
-                className="footer-col-link"
-              >
-                miguelmiguezangel@gmail.com
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://wa.me/5491173643037"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="footer-col-link"
-              >
-                +54 9 11 7364 3037
+              <a href="mailto:argsoft.ar@gmail.com" className="footer-col-link">
+                argsoft.ar@gmail.com
               </a>
             </li>
           </ul>

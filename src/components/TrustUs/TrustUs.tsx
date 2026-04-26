@@ -29,7 +29,7 @@ export default function TrustUs() {
         >
           <div className="trust-us-marquee-track">
             {[...logos, ...logos].map((logo, i) => (
-              <div key={i} className="trust-us-logo-item">
+              <div key={`${logo.id}-${i}`} className="trust-us-logo-item">
                 <img
                   src={logo.src}
                   alt={logo.name}

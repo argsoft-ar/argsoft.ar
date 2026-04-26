@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import portfolioData from "../../../../data/portfolioData.json";
 import "./Projects.css";
 import { useInView } from "../../../../hooks/useInView";
@@ -16,7 +16,59 @@ interface Project {
 export default function Projects() {
   const projects: Project[] = portfolioData.es;
   const [hoveredId, setHoveredId] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   const { ref, inView } = useInView();
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const setCardRef = useCallback(
+    (index: number) => (el: HTMLDivElement | null) => {
+      cardRefs.current[index] = el;
+    },
+    [],
+  );
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+
+    const cards = cardRefs.current.filter(Boolean) as HTMLDivElement[];
+    if (cards.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const idx = cards.indexOf(entry.target as HTMLDivElement);
+            if (idx !== -1) {
+              setActiveIndex(idx);
+            }
+          }
+        });
+      },
+      {
+        root: container,
+        threshold: 0.6,
+      },
+    );
+
+    cards.forEach((card) => observer.observe(card));
+
+    return () => {
+      cards.forEach((card) => observer.unobserve(card));
+    };
+  }, [projects.length]);
+
+  const scrollToCard = (index: number) => {
+    const card = cardRefs.current[index];
+    if (card) {
+      card.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
+      });
+    }
+  };
 
   return (
     <section className="projects-section" id="proyectos">
@@ -58,18 +110,47 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Mobile: vertical stack */}
+        {/* Mobile: horizontal snap carousel */}
         <div
           className={`projects-mobile${inView ? " anim-fade-up anim-delay-2" : " anim-hidden"}`}
         >
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              {...project}
-              index={index}
-              className="project-card-mobile"
-            />
-          ))}
+          <div className="projects-carousel" ref={scrollContainerRef}>
+            {projects.map((project, index) => (
+              <div
+                key={project.id}
+                ref={setCardRef(index)}
+                className={`projects-carousel__item${
+                  activeIndex === index
+                    ? " projects-carousel__item--active"
+                    : ""
+                }`}
+              >
+                <ProjectCard
+                  {...project}
+                  index={index}
+                  className="project-card-mobile"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="projects-pagination">
+            <span className="projects-counter">
+              {String(activeIndex + 1).padStart(2, "0")} /{" "}
+              {String(projects.length).padStart(2, "0")}
+            </span>
+            <div className="projects-dots">
+              {projects.map((project, index) => (
+                <button
+                  key={project.id}
+                  type="button"
+                  className={`projects-dot${activeIndex === index ? " projects-dot--active" : ""}`}
+                  onClick={() => scrollToCard(index)}
+                  aria-label={`Ir al proyecto ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
