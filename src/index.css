@@ -23,10 +23,10 @@ div[id] {
   --background-secondary: #ffffff;
   --text-color: #242423;
   --text-muted: #434b57;
-  --secondary-color: #7953f5;
-  --accent-color: #7953f5;
+  --secondary-color: #74acdf;
+  --accent-color: #74acdf;
   --hover-color: #9b7dfa;
-  --border-color: rgba(36, 36, 35, 0.1);
+  --border-color: #f6b40e;
   --box-shadow-color: 0 2px 8px rgba(0, 0, 0, 0.1);
   --box-shadow-hover-color: rgba(121, 83, 245, 0.4) 0px 4px 12px;
   --text-on-primary: #ffffff;
@@ -36,11 +36,11 @@ div[id] {
 [data-theme="dark"] {
   --background-color: #242423;
   --background-secondary: #2d2d2c;
-  --text-color: #f7f7f8;
+  --text-color: #74acdf;
   --text-muted: #9ca3af;
-  --secondary-color: #7953f5;
-  --accent-color: #7953f5;
-  --hover-color: #9b7dfa;
+  --secondary-color: #194792;
+  --accent-color: #194792;
+  --hover-color: #74acdf;
   --border-color: rgba(247, 247, 248, 0.1);
   --box-shadow-color: 0 2px 8px rgba(0, 0, 0, 0.3);
   --box-shadow-hover-color: 0 4px 12px rgba(0, 0, 0, 0.4);
