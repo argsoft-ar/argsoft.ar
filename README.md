@@ -46,7 +46,7 @@ Vercel  ..........  Hosting
 
 ---
 
-## Project layout
+## Project layout:
 
 ```
 src/
