@@ -10,7 +10,6 @@
 
 Landing page and portfolio for **ARGSOFT** -- a software studio building web products for Argentine SMEs.
 
-Live at [argsoft.ar](argsoft.vercel.app)
 
 ---
 
