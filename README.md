@@ -8,7 +8,7 @@
 
 # argsoft.ar
 
-Landing page and portfolio for **ARGSOFT** -- a software studio building web products for Argentine SMEs.
+Landing page and portfolio for **ARGSOFT** -- a software studio building web products for Argentine.
 
 
 ---
