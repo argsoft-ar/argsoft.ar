@@ -9,6 +9,21 @@
       "id": 2,
       "name": "Campo Fertil",
       "src": "https://res.cloudinary.com/dxl9cojcx/image/upload/v1766758814/campo_fertil_tsrnh8.svg"
+    },
+    {
+      "id": 3,
+      "name": "SomosMon",
+      "src": "https://res.cloudinary.com/dry6jcgfn/image/upload/v1784662324/logo_somos_mon_cf7isl.png"
+    },
+    {
+      "id": 4,
+      "name": "BurgerFlow",
+      "src": "https://res.cloudinary.com/dry6jcgfn/image/upload/v1784662661/Burger_Flow_vjt4cd.png"
+    },
+    {
+      "id": 5,
+      "name": "Dai Cabello Photography",
+      "src": "https://res.cloudinary.com/dry6jcgfn/image/upload/v1784662597/logo_dai_cabello_fdx2yt.png"
     }
   ]
 }
