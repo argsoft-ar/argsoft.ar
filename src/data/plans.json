@@ -1,0 +1,70 @@
+{
+  "globalFeatures": {
+    "title": "Lo que incluyen TODOS nuestros planes",
+    "subtitle": "Para que tu negocio nunca se detenga, todas nuestras opciones cuentan con:",
+    "items": [
+      {
+        "title": "Diseño a medida y profesional",
+        "description": "Estética moderna, limpia y adaptada a la identidad de tu marca."
+      },
+      {
+        "title": "Adaptabilidad total (Responsive)",
+        "description": "Tu web se verá y funcionará perfecto en celulares, tablets y computadoras."
+      },
+      {
+        "title": "Tecnología de alta velocidad",
+        "description": "Construimos con herramientas modernas que garantizan que tu página cargue al instante, evitando que los clientes se impacienten y se vayan."
+      },
+      {
+        "title": "Mantenimiento mensual continuo",
+        "description": "Nos ocupamos de que tu sitio esté siempre seguro, actualizado y funcionando sin errores (servicio mediante suscripción mensual)."
+      }
+    ]
+  },
+  "plans": [
+    {
+      "id": "basico",
+      "icon": "Rocket",
+      "subtitle": "Plan Básico",
+      "title": "Presencia de Alto Impacto",
+      "description": "La opción perfecta para lanzar un nuevo producto, captar clientes rápidamente o tener una tarjeta de presentación digital directa y efectiva. El objetivo aquí es guiar al visitante a realizar una acción concreta, como contactarte o comprar.",
+      "variant": "premium",
+      "features": [
+        "Página única (One-Page) con información vital organizada estratégicamente",
+        "Botones de acción directa a WhatsApp para cerrar ventas al instante",
+        "Formulario de captura de clientes para recibir datos directo a tu correo",
+        "Optimización de velocidad: tu página cargará en milisegundos"
+      ]
+    },
+    {
+      "id": "standard",
+      "icon": "Building2",
+      "subtitle": "Plan Standard",
+      "title": "Web Empresarial Completa",
+      "description": "Diseñado para negocios e instituciones que necesitan mostrar profesionalismo, generar confianza y ofrecer mucha más información sobre sus servicios. Es una oficina virtual completa abierta las 24 horas.",
+      "variant": "featured",
+      "features": [
+        "Todo lo del Plan Básico",
+        "Navegación multipágina (hasta 5 secciones): Inicio, Nosotros, Servicios, Portfolio, Contacto",
+        "Conexión con herramientas externas: mapas, redes sociales, reservas, botones de pago",
+        "Preparación para Google (SEO básico) para que tus clientes te encuentren fácilmente"
+      ]
+    },
+    {
+      "id": "completo",
+      "icon": "Cog",
+      "subtitle": "Plan Completo",
+      "title": "Sistema a Medida y Gestión",
+      "description": "Ideal para empresas que no solo quieren 'estar' en internet, sino que necesitan una herramienta de trabajo para automatizar tareas, gestionar información compleja o vender a gran escala. Es el motor digital de tu negocio.",
+      "variant": "premium",
+      "features": [
+        "Todo lo del Plan Standard",
+        "Desarrollo del 'Cerebro' del Sistema: lógica interna automática",
+        "Panel de Control Privado para gestionar usuarios, pedidos y métricas",
+        "Gestión de Bases de Datos seguras para clientes, productos y transacciones",
+        "Cuentas de Usuario con perfiles personalizados",
+        "Procesos a medida: automatización de flujos complejos (stock, recibos, notificaciones)"
+      ]
+    }
+  ]
+}

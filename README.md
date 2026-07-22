@@ -29,6 +29,34 @@ Other features: language switcher (ES/EN), scroll-triggered CSS animations via I
 
 ---
 
+## Design System: Patria Minimalist
+
+A sophisticated intersection of high-trust software engineering and Argentine national identity based on **Neo-Brutalism**.
+
+### Brand Colors
+
+| Token            | Value     | Usage                                   |
+| ---------------- | --------- | --------------------------------------- |
+| `--celeste-sky`  | `#74ACDF` | Primary interactive color, brand accent |
+| `--sun-gold`     | `#F6B40E` | Callouts, badges, success highlights    |
+| `--ink-black`    | `#242423` | Borders, shadows, structural elements   |
+| `--pampas-white` | `#FFFFFF` | Card surfaces, text on primary          |
+| `--snow-gray`    | `#F7F7F8` | Main canvas background                  |
+| `--tech-violet`  | `#9B7DFA` | Hover states, tech badges               |
+
+### Typography
+
+- **Urbanist** (100-900 weights) — all UI text
+- **Courier Prime** — technical metadata, counters
+
+### Key Styling
+
+- **Hard Shadows**: `4px 4px 0px` offset (ink-black)
+- **Borders**: Consistent `2px` solid borders
+- **Shapes**: Sharp (0px) or soft-industrial (4px) radius for containers; pill-shaped (999px) for nav/chips
+
+---
+
 ## Stack
 
 ```

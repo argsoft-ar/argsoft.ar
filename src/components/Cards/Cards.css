@@ -6,7 +6,7 @@
   justify-content: start;
   align-items: start;
   padding: 30px;
-  min-height: 380px;
+  min-height: 455px;
   gap: 20px;
   border: 2px solid var(--text-color);
   box-shadow: var(--hard-shadow);
@@ -42,6 +42,40 @@
   align-items: center;
   justify-content: start;
   gap: 5px;
+}
+
+.card-button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.card-button-text {
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--text-color);
+  color: var(--text-on-primary);
+  border: 2px solid var(--text-color);
+  border-radius: var(--rounded);
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.card-button-text:hover {
+  background-color: var(--secondary-color);
+}
+
+.card-button-text:active {
+  transform: translateY(2px);
 }
 
 @media (min-width: 768px) {
