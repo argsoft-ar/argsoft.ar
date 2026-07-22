@@ -18,7 +18,6 @@ div[id] {
 }
 
 :root {
-  /* Light theme (default) */
   --background-color: #f7f7f8;
   --background-secondary: #ffffff;
   --text-color: #242423;
@@ -31,31 +30,6 @@ div[id] {
   --box-shadow-hover-color: rgba(121, 83, 245, 0.4) 0px 4px 12px;
   --text-on-primary: #ffffff;
   --hard-shadow: 4px 4px 0px #242423;
-}
-
-[data-theme="dark"] {
-  --background-color: #242423;
-  --background-secondary: #2d2d2c;
-  --text-color: #74acdf;
-  --text-muted: #9ca3af;
-  --secondary-color: #194792;
-  --accent-color: #194792;
-  --hover-color: #74acdf;
-  --border-color: rgba(247, 247, 248, 0.1);
-  --box-shadow-color: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --box-shadow-hover-color: 0 4px 12px rgba(0, 0, 0, 0.4);
-  --text-on-primary: #ffffff;
-  --hard-shadow: 4px 4px 0px #f7f7f8;
-}
-
-/* Smooth theme transitions */
-*,
-*::before,
-*::after {
-  transition:
-    background-color 0.3s ease,
-    color 0.2s ease,
-    border-color 0.3s ease;
 }
 
 /* Focus visible for accessibility */

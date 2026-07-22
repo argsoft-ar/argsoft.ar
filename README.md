@@ -26,7 +26,7 @@ A single-page site with six scrollable sections:
 | 5   | **Work Process** | Four-step methodology: Discovery, Design, Development, Deployment |
 | 6   | **Contact**      | Form that opens a pre-filled WhatsApp message                     |
 
-Other features: dark/light theme toggle (persisted), language switcher (ES/EN), scroll-triggered CSS animations via Intersection Observer, responsive navbar with mobile hamburger menu.
+Other features: language switcher (ES/EN), scroll-triggered CSS animations via Intersection Observer, responsive navbar with mobile hamburger menu.
 
 ---
 
@@ -49,8 +49,7 @@ Vercel  ..........  Hosting
 
 ```
 src/
-  components/       Reusable UI (Navbar, Footer, Cards, Buttons, ThemeSwitcher, LangSwitcher, ...)
-  contexts/         ThemeContext (dark/light)
+  components/       Reusable UI (Navbar, Footer, Cards, Buttons, LangSwitcher, ...)
   data/             JSON data files (services, portfolio, work process, client logos)
   hooks/            useInView (Intersection Observer)
   pages/home/       Home page + section components (Hero, Services, Projects, WorkProcess, Contact)

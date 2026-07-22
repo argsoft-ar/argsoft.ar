@@ -154,9 +154,3 @@
     font-size: 6rem;
   }
 }
-
-[data-theme="dark"] .chip {
-  background-color: rgba(121, 83, 245, 0.22);
-  color: #c4aeff;
-  border: 1px solid rgba(121, 83, 245, 0.35);
-}

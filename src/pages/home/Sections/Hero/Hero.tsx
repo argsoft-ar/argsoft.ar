@@ -20,7 +20,7 @@ export default function Hero() {
           <span
             className={`chip${inView ? " anim-fade-up anim-delay-1" : " anim-hidden"}`}
           >
-            <Dot color="var(--secondary-color)" /> Disponibles para nuevos
+            <Dot color="var(--border-color)" /> Disponibles para nuevos
             proyectos
           </span>
           <h2
