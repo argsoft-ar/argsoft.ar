@@ -10,6 +10,8 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { id: "servicios", label: "servicios" },
+  { id: "planes", label: "planes" },
+  { id: "nosotros", label: "nosotros" },
   { id: "proyectos", label: "proyectos" },
   { id: "proceso", label: "proceso" },
 ];

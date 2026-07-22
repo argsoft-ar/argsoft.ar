@@ -4,6 +4,8 @@ import logo from "../../assets/brand/as.svg";
 
 const navLinks = [
   { label: "Servicios", id: "servicios" },
+  { label: "Planes", id: "planes" },
+  { label: "Nosotros", id: "nosotros" },
   { label: "Proyectos", id: "proyectos" },
   { label: "Proceso", id: "proceso" },
   { label: "Contacto", id: "contacto" },
