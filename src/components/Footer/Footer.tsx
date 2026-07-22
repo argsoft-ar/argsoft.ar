@@ -4,6 +4,8 @@ import logo from "../../assets/brand/as.svg";
 
 const navLinks = [
   { label: "Servicios", id: "servicios" },
+  { label: "Planes", id: "planes" },
+  { label: "Nosotros", id: "nosotros" },
   { label: "Proyectos", id: "proyectos" },
   { label: "Proceso", id: "proceso" },
   { label: "Contacto", id: "contacto" },
@@ -28,9 +30,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-accent-bar" />
 
-      <p className="footer-wordmark">
-        ARGSOFT <span className="footer-wordmark-accent">.</span>
-      </p>
+      <p className="footer-wordmark">ARGSOFT</p>
       <p className="footer-tagline">
         Transformando ideas en experiencias digitales.
       </p>

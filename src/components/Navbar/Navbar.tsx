@@ -2,7 +2,6 @@ import { useState, type MouseEvent } from "react";
 import "./Navbar.css";
 import { Menu, PhoneIcon, X } from "lucide-react";
 import Button from "../Buttons/Button";
-import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 
 interface NavLink {
   id: string;
@@ -11,6 +10,8 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { id: "servicios", label: "servicios" },
+  { id: "planes", label: "planes" },
+  { id: "nosotros", label: "nosotros" },
   { id: "proyectos", label: "proyectos" },
   { id: "proceso", label: "proceso" },
 ];
@@ -58,7 +59,6 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-          <ThemeSwitcher />
           <Button
             text="Contactános"
             icon={PhoneIcon}
@@ -114,7 +114,6 @@ export default function Navbar() {
             ))}
           </div>
           <div className="navbar-mobile-menu-footer">
-            <ThemeSwitcher />
             <Button
               text="Contactános"
               icon={PhoneIcon}
