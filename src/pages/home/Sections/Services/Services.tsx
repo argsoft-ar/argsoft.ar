@@ -37,6 +37,7 @@ export default function Services() {
                 title={service.title}
                 description={service.description}
                 items={service.items}
+                buttonText={"Ver paquetes"}
               />
             </div>
           ))}

@@ -79,7 +79,7 @@ export default function Contact() {
                 id="contact-message"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="¿En qué podemos ayudarte?"
+                placeholder="Hola! Me gustaría obtener una consulta gratuita y un presupuesto para mi proyecto. "
                 className="contact-textarea"
                 required
               />
