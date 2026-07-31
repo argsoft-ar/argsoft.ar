@@ -101,7 +101,7 @@
 
 /* Timeline card - neo-brutalist styling */
 .timeline-card {
-  width: 200px;
+  width: 90%;
   min-height: 120px;
   display: flex;
   flex-direction: column;
