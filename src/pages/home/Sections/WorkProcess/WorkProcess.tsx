@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./WorkProcess.css";
 import workProcessData from "../../../../data/workProcess.json";
 import { useInView } from "../../../../hooks/useInView";
@@ -10,20 +9,17 @@ interface Step {
   description: string;
 }
 
+const STEP_COLORS = [
+  "#74acdf", // amber
+  "#eab308", // yellow
+  "#74acdf", // green
+  "#eab308", // purple
+  "#74acdf", // cyan
+];
+
 export default function WorkProcess() {
   const steps: Step[] = workProcessData.steps;
-  const [activeStep, setActiveStep] = useState<number>(0);
-  const [fadeClass, setFadeClass] = useState<string>("fade-in");
   const { ref, inView } = useInView();
-
-  const handleDotClick = (index: number) => {
-    if (index === activeStep) return;
-    setFadeClass("fade-out");
-    setTimeout(() => {
-      setActiveStep(index);
-      setFadeClass("fade-in");
-    }, 300);
-  };
 
   return (
     <section className="work-process-section" id="proceso">
@@ -48,45 +44,26 @@ export default function WorkProcess() {
           lanzamiento.
         </p>
 
-        {/* Desktop: horizontal steps with connectors */}
         <div
-          className={`work-process-steps-desktop${inView ? " anim-fade-up anim-delay-4" : " anim-hidden"}`}
+          className={`work-process-timeline${inView ? " anim-fade-up anim-delay-4" : " anim-hidden"}`}
         >
           {steps.map((step, index) => (
-            <div key={step.id} className="work-process-step">
-              <div className="step-number-container">
-                <div className="step-number step-active">{step.number}</div>
-                {index < steps.length - 1 && (
-                  <div className="step-connector connector-active" />
-                )}
+            <div
+              key={step.id}
+              className={`timeline-item timeline-item--${index % 2 === 0 ? "left" : "right"}`}
+            >
+              <div
+                className="timeline-circle"
+                style={{ borderColor: STEP_COLORS[index] }}
+              >
+                {step.number}
               </div>
-              <h3 className="step-title">{step.title}</h3>
-              <p className="step-description">{step.description}</p>
+              <div className="timeline-card">
+                <h3 className="timeline-card__title">{step.title}</h3>
+                <p className="timeline-card__description">{step.description}</p>
+              </div>
             </div>
           ))}
-        </div>
-
-        {/* Mobile: single step carousel with dot navigation */}
-        <div
-          className={`work-process-steps-mobile ${fadeClass}${inView ? " anim-fade-up anim-delay-4" : " anim-hidden"}`}
-        >
-          <div className="step-number-container">
-            <div className="step-number step-active">
-              {steps[activeStep].number}
-            </div>
-          </div>
-          <h3 className="step-title">{steps[activeStep].title}</h3>
-          <p className="step-description">{steps[activeStep].description}</p>
-          <div className="process-dots">
-            {steps.map((step, index) => (
-              <button
-                key={step.id}
-                className={`process-dot${activeStep === index ? " active" : ""}`}
-                onClick={() => handleDotClick(index)}
-                aria-label={`Paso ${index + 1}`}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>
