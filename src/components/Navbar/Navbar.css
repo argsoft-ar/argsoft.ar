@@ -23,11 +23,17 @@
   font-weight: 600;
   transition: 1s;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
 }
 
 .navbar-logo-img {
-  width: 35px;
+  width: 45px;
   height: auto;
+  transform: scale(2.3);
 }
 
 .navbar-logo:hover .navbar-logo-text {

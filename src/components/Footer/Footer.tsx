@@ -1,6 +1,6 @@
 import "./Footer.css";
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import logo from "../../assets/brand/as.svg";
+import logo from "../../assets/logo.png";
 
 const navLinks = [
   { label: "Servicios", id: "servicios" },
