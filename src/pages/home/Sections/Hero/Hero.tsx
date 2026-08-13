@@ -20,14 +20,16 @@ export default function Hero() {
           <span
             className={`chip${inView ? " anim-fade-up anim-delay-1" : " anim-hidden"}`}
           >
-            <Dot color="var(--secondary-color)" /> Disponibles para nuevos
+            <Dot color="var(--border-color)" /> Disponibles para nuevos
             proyectos
           </span>
           <h2
             className={`hero-title${inView ? " anim-fade-up anim-delay-2" : " anim-hidden"}`}
           >
-            Haciendo el futuro de la web hoy
+            Soberanía tecnológica{" "}
+            <span className="hero-title-accent">Argentina</span>
           </h2>
+          <div className="line"></div>
           <p
             className={`hero-subtitle${inView ? " anim-fade-up anim-delay-3" : " anim-hidden"}`}
           >

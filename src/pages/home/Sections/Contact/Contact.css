@@ -205,15 +205,15 @@
 }
 
 .contact-message.success {
-  color: #10b981;
-  background-color: rgba(16, 185, 129, 0.08);
-  border-color: #10b981;
+  color: var(--success);
+  background-color: var(--success-container);
+  border-color: var(--success);
 }
 
 .contact-message.error {
-  color: #ef4444;
-  background-color: rgba(239, 68, 68, 0.08);
-  border-color: #ef4444;
+  color: var(--error);
+  background-color: var(--error-container);
+  border-color: var(--error);
 }
 
 @media (min-width: 768px) {

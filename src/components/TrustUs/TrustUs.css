@@ -28,9 +28,25 @@
 }
 
 /* Marquee container */
+/* Marquee container */
 .trust-us-marquee {
   overflow: hidden;
   width: 100%;
+  /* Fade lateral suave */
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
 }
 
 .trust-us-marquee-track {

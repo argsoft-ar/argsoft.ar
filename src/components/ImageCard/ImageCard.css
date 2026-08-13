@@ -31,12 +31,7 @@
 .image-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.95) 0%,
-    rgba(0, 0, 0, 0.7) 50%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
+  background: var(--overlay-card);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -50,7 +45,7 @@
 }
 
 .image-card-title {
-  color: #fff;
+  color: var(--pampas-white);
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
@@ -92,8 +87,8 @@
 }
 
 .image-card-tech {
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
+  background: var(--overlay-light);
+  color: var(--pampas-white);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.75rem;

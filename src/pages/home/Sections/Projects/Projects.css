@@ -66,12 +66,7 @@
 .project-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.93) 0%,
-    rgba(0, 0, 0, 0.45) 55%,
-    rgba(0, 0, 0, 0.08) 100%
-  );
+  background: var(--overlay-card);
   transition: background 0.35s ease;
 }
 
@@ -121,7 +116,7 @@
   font-size: 0.68rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.75);
-  background: rgba(121, 83, 245, 0.5);
+  background: rgba(155, 125, 250, 0.5);
   border: 1px solid var(--secondary-color);
   border-radius: 0;
   padding: 0.15rem 0.55rem;
@@ -131,7 +126,7 @@
 .project-card__title {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--pampas-white);
   margin: 0 0 0.4rem;
   line-height: 1.2;
   transition: transform 0.3s ease;
@@ -243,9 +238,9 @@
 }
 
 .project-card--active .project-card__number {
-  background: rgba(121, 83, 245, 0.5);
+  background: rgba(155, 125, 250, 0.5);
   border-color: var(--secondary-color);
-  color: #fff;
+  color: var(--pampas-white);
 }
 
 .project-card--active .project-card__tech-row {

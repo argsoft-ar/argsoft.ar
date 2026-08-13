@@ -12,10 +12,24 @@ interface CardsProps {
   title: string;
   description: string;
   items?: string[];
+  buttonText?: string;
 }
 
-export default function Cards({ icon, title, description, items }: CardsProps) {
+export default function Cards({
+  icon,
+  title,
+  description,
+  items,
+  buttonText,
+}: CardsProps) {
   const IconComponent = iconMap[icon];
+
+  const scrollToPlans = () => {
+    const plansSection = document.getElementById("planes");
+    if (plansSection) {
+      plansSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="card">
@@ -32,6 +46,13 @@ export default function Cards({ icon, title, description, items }: CardsProps) {
             </li>
           ))}
         </ul>
+      )}
+      {buttonText && (
+        <div className="card-button">
+          <button className="card-button-text" onClick={scrollToPlans}>
+            {buttonText}
+          </button>
+        </div>
       )}
     </div>
   );
