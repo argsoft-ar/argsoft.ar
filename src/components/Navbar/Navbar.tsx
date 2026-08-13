@@ -2,6 +2,7 @@ import { useState, type MouseEvent } from "react";
 import "./Navbar.css";
 import { Menu, PhoneIcon, X } from "lucide-react";
 import Button from "../Buttons/Button";
+import logo from "../../assets/logo.png";
 
 interface NavLink {
   id: string;
@@ -41,9 +42,10 @@ export default function Navbar() {
                 textDecoration: "none",
                 display: "flex",
                 alignItems: "center",
-                gap: "0.5rem",
+                gap: "2rem",
               }}
             >
+              <img className="navbar-logo-img" src={logo} alt="Argsoft Logo" />
               <h1 className="navbar-logo-text">Argsoft</h1>
             </a>
           </div>
