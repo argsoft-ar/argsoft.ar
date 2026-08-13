@@ -2,6 +2,7 @@ import { useState, type MouseEvent } from "react";
 import "./Navbar.css";
 import { Menu, PhoneIcon, X } from "lucide-react";
 import Button from "../Buttons/Button";
+import logo from "../../assets/logo.png";
 
 interface NavLink {
   id: string;
