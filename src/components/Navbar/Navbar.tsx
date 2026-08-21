@@ -42,7 +42,7 @@ export default function Navbar() {
                 textDecoration: "none",
                 display: "flex",
                 alignItems: "center",
-                gap: "2rem",
+                gap: "1rem",
               }}
             >
               <img className="navbar-logo-img" src={logo} alt="Argsoft Logo" />
