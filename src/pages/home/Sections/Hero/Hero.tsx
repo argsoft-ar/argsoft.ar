@@ -2,7 +2,7 @@ import LottieAnimation from "../../../../components/LottieAnimation/LottieAnimat
 import animationData from "../../../../assets/animations/hero.json";
 import "./Hero.css";
 import Button from "../../../../components/Buttons/Button";
-import { ArrowRight, Dot, User } from "lucide-react";
+import { ArrowRight, User } from "lucide-react";
 import { useInView } from "../../../../hooks/useInView";
 import ElementBg from "../../../../components/ElementBg/ElementBg";
 
@@ -17,12 +17,6 @@ export default function Hero() {
         ref={ref as React.RefObject<HTMLDivElement>}
       >
         <div className="hero-container">
-          <span
-            className={`chip${inView ? " anim-fade-up anim-delay-1" : " anim-hidden"}`}
-          >
-            <Dot color="var(--border-color)" /> Disponibles para nuevos
-            proyectos
-          </span>
           <h2
             className={`hero-title${inView ? " anim-fade-up anim-delay-2" : " anim-hidden"}`}
           >
