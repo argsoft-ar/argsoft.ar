@@ -2,7 +2,7 @@ import LottieAnimation from "../../../../components/LottieAnimation/LottieAnimat
 import animationData from "../../../../assets/animations/hero.json";
 import "./Hero.css";
 import Button from "../../../../components/Buttons/Button";
-import { ArrowRight, Dot, User } from "lucide-react";
+import { ArrowRight, User } from "lucide-react";
 import { useInView } from "../../../../hooks/useInView";
 import ElementBg from "../../../../components/ElementBg/ElementBg";
 
