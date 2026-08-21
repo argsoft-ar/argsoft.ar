@@ -17,12 +17,6 @@ export default function Hero() {
         ref={ref as React.RefObject<HTMLDivElement>}
       >
         <div className="hero-container">
-          <span
-            className={`chip${inView ? " anim-fade-up anim-delay-1" : " anim-hidden"}`}
-          >
-            <Dot color="var(--border-color)" /> Disponibles para nuevos
-            proyectos
-          </span>
           <h2
             className={`hero-title${inView ? " anim-fade-up anim-delay-2" : " anim-hidden"}`}
           >
