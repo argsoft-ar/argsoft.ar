@@ -49,11 +49,8 @@
 }
 
 .hero-animation {
-  background-color: var(--background-secondary);
   width: 90%;
-  border-radius: 0;
-  border: 2px solid var(--text-color);
-  box-shadow: 6px 6px 0 var(--text-color);
+
   position: relative;
   overflow: hidden;
   transform: none;
