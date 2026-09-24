@@ -6,7 +6,6 @@ interface ProjectCardProps {
   readonly technologies: readonly string[];
   readonly image: string;
   readonly url: string;
-  readonly index: number;
   readonly className?: string;
   readonly onMouseEnter?: () => void;
   readonly onMouseLeave?: () => void;
@@ -18,7 +17,6 @@ export default function ProjectCard({
   technologies,
   image,
   url,
-  index,
   className = "",
   onMouseEnter,
   onMouseLeave,
@@ -35,9 +33,6 @@ export default function ProjectCard({
     >
       <img src={image} alt={title} className="project-card__img" />
       <div className="project-card__overlay" />
-      <span className="project-card__number">
-        {String(index + 1).padStart(2, "0")}
-      </span>
       <div className="project-card__content">
         <div className="project-card__tech-row">
           {technologies.slice(0, 3).map((tech) => (
