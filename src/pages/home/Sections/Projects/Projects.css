@@ -2,6 +2,25 @@
 .projects-section {
   padding: 60px 20px;
   background-color: var(--background-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.projects-section::before {
+  content: "PROYECTOS";
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  font-size: 12vw;
+  font-weight: 900;
+  color: var(--text-color);
+  opacity: 0.03;
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  z-index: 0;
+  white-space: nowrap;
 }
 
 .projects-inner {
@@ -10,6 +29,8 @@
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* ===== HEADER ===== */
@@ -70,26 +91,6 @@
   transition: background 0.35s ease;
 }
 
-.project-card__number {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: rgba(255, 255, 255, 0.55);
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 0;
-  padding: 0.2rem 0.65rem;
-  backdrop-filter: blur(4px);
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    border-color 0.3s ease;
-  z-index: 2;
-}
-
 .project-card__content {
   position: absolute;
   inset: 0;
@@ -116,8 +117,8 @@
   font-size: 0.68rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.75);
-  background: rgba(155, 125, 250, 0.5);
-  border: 1px solid var(--secondary-color);
+  background: color-mix(in srgb, var(--primary) 55%, transparent);
+  border: 1px solid var(--primary);
   border-radius: 0;
   padding: 0.15rem 0.55rem;
   backdrop-filter: blur(4px);
@@ -237,12 +238,6 @@
   );
 }
 
-.project-card--active .project-card__number {
-  background: rgba(155, 125, 250, 0.5);
-  border-color: var(--secondary-color);
-  color: var(--pampas-white);
-}
-
 .project-card--active .project-card__tech-row {
   opacity: 1;
   transform: translateY(0);
@@ -281,12 +276,6 @@
 
 .project-card--1 .project-card__content {
   padding: 2rem;
-}
-
-.project-card--1 .project-card__number {
-  font-size: 0.8rem;
-  top: 1.25rem;
-  left: 1.25rem;
 }
 
 /* ===== MOBILE: horizontal snap carousel ===== */

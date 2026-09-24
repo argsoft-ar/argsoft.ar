@@ -8,6 +8,23 @@
   overflow: hidden;
 }
 
+.work-process-section::before {
+  content: "PROCESO";
+  position: absolute;
+  top: -10px;
+  right: -20px;
+  font-size: 12vw;
+  font-weight: 900;
+  color: var(--text-color);
+  opacity: 0.03;
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  z-index: 0;
+  white-space: nowrap;
+}
+
 .work-process-content {
   display: flex;
   flex-direction: column;
