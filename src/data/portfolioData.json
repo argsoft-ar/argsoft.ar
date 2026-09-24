@@ -10,11 +10,11 @@
     },
     {
       "id": 2,
-      "title": "Hooligang Cuts",
-      "description": "Diseño y desarrollo web para una barbería, con la implementación de un sistema de programación de turnos a través de Cal.com para gestión de citas.",
-      "technologies": ["HTML", "SASS", "JavaScript"],
-      "image": "https://res.cloudinary.com/deamcrkgb/image/upload/v1745879400/Hooligang_g1b976.png",
-      "url": "https://hooligangcuts.netlify.app/"
+      "title": "Doc Panda Producciones",
+      "description": "Diseño y desarrollo web para Doc Panda Producciones, con un enfoque en la presentación de sus servicios y proyectos.",
+      "technologies": ["React", "TypeScript", "Vite"],
+      "image": "https://res.cloudinary.com/dry6jcgfn/image/upload/v1790208458/docpanda_ksqgso.jpg",
+      "url": "https://www.docpandaproducciones.com.ar/"
     },
     {
       "id": 3,

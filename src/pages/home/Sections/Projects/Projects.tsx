@@ -96,7 +96,6 @@ export default function Projects() {
             <ProjectCard
               key={project.id}
               {...project}
-              index={index}
               className={`project-card project-card--${index + 1}${
                 hoveredId === project.id ? " project-card--active" : ""
               }${
@@ -125,11 +124,7 @@ export default function Projects() {
                     : ""
                 }`}
               >
-                <ProjectCard
-                  {...project}
-                  index={index}
-                  className="project-card-mobile"
-                />
+                <ProjectCard {...project} className="project-card-mobile" />
               </div>
             ))}
           </div>
