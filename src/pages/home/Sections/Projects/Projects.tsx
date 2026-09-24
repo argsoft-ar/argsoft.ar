@@ -124,10 +124,7 @@ export default function Projects() {
                     : ""
                 }`}
               >
-                <ProjectCard
-                  {...project}
-                  className="project-card-mobile"
-                />
+                <ProjectCard {...project} className="project-card-mobile" />
               </div>
             ))}
           </div>
