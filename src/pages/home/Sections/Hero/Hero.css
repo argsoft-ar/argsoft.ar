@@ -91,14 +91,17 @@
 }
 
 .hero-title {
+  font-family: var(--font-heading);
   font-size: 3rem;
-  font-weight: 900;
+  font-weight: 400;
   color: var(--text-color);
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
 }
 
 .hero-title-accent {
+  font-family: var(--font-heading);
+  font-weight: 400;
   color: var(--secondary-color);
 }
 

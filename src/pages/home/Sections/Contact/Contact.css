@@ -61,11 +61,12 @@
 }
 
 .contact-title {
+  font-family: var(--font-heading);
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 400;
   color: var(--text-color);
   line-height: 1.1;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
 }
 
 .contact-subtitle {
