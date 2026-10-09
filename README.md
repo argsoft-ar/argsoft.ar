@@ -46,8 +46,8 @@ A sophisticated intersection of high-trust software engineering and Argentine na
 
 ### Typography
 
-- **Urbanist** (100-900 weights) — all UI text
-- **Courier Prime** — technical metadata, counters
+- **BebasKai** (local, `public/fonts`, single weight) — headings and the ARGSOFT logo/wordmark
+- **Baloo 2** (400-800 weights, Google Fonts) — all other text
 
 ### Key Styling
 

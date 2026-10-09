@@ -1,11 +1,30 @@
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap");
+
+@font-face {
+  font-family: "BebasKai";
+  src:
+    url("/fonts/BebasKai.otf") format("opentype"),
+    url("/fonts/BebasKai.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Urbanist", sans-serif;
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
 }
 
 html {
@@ -19,6 +38,10 @@ div[id] {
 }
 
 :root {
+  /* Typography */
+  --font-heading: "BebasKai", "Baloo 2", sans-serif;
+  --font-body: "Baloo 2", sans-serif;
+
   /* === Patria Minimalist Design System === */
 
   /* Surface Colors */
@@ -43,7 +66,7 @@ div[id] {
   --outline-variant: #c1c7d0;
 
   /* Primary - Celeste Sky */
-  --primary: #236391;
+  --primary: #3a727c;
   --on-primary: #ffffff;
   --primary-container: #74acdf;
   --on-primary-container: #003f65;
@@ -53,7 +76,7 @@ div[id] {
   /* Secondary - Sun Gold */
   --secondary: #7b5800;
   --on-secondary: #ffffff;
-  --secondary-container: #febb1b;
+  --secondary-container: #7ec7d5;
   --on-secondary-container: #6c4d00;
 
   /* Tertiary - Azul Mayo */
@@ -90,10 +113,10 @@ div[id] {
   /* Brand Colors */
   --pampas-white: #ffffff;
   --snow-gray: #f7f7f8;
-  --ink-black: #242423;
-  --tech-violet: #9b7dfa;
-  --celeste-sky: #74acdf;
-  --sun-gold: #f6b40e;
+  --ink-black: #31342f;
+  --tech-violet: #7ec7d5;
+  --celeste-sky: #3a727c;
+  --sun-gold: #7ec7d5;
 
   /* === Legacy Variables (mapped to new system) === */
   --background-color: var(--snow-gray);
@@ -161,4 +184,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   overflow-x: hidden;
+  font-optical-sizing: auto;
+  font-style: normal;
 }

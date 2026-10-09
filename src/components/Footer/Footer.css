@@ -13,38 +13,54 @@
   margin-bottom: 0;
 }
 
-.footer-wordmark {
-  font-size: 5rem;
-  font-weight: 900;
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--secondary-color);
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 2rem auto 3rem;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
   text-align: center;
-  line-height: 1;
-  margin: 2rem 0 0.5rem;
-  user-select: none;
-  opacity: 0.35;
+}
+
+/* El PNG es cuadrado con ~9% de margen lateral y ~37% vertical; el marco recorta al área útil del logo. */
+.footer-logo-frame {
+  width: min(260px, 70%);
+  max-width: 100%;
+  aspect-ratio: 1610 / 640;
+  overflow: hidden;
 }
 
 .footer-logo {
-  width: 150px;
-  height: auto;
   display: block;
-  margin: 0.5rem auto 2rem;
+  width: 119.3%;
+  max-width: none;
+  height: auto;
+  margin: -42.9% 0 0 -9.3%;
+  object-fit: contain;
 }
 
 .footer-tagline {
+  font-family: var(--font-body);
   font-size: 0.9rem;
   color: var(--text-muted);
-  text-align: center;
-  margin-bottom: 3rem;
+  max-width: 30ch;
+  margin: 0;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
-  max-width: 900px;
-  margin: 0 auto 3rem;
+  width: 100%;
 }
 
 .footer-col-label {
@@ -130,8 +146,12 @@
 }
 
 @media (min-width: 768px) {
-  .footer-wordmark {
-    font-size: 9rem;
+  .footer-main {
+    gap: 3rem;
+  }
+
+  .footer-logo-frame {
+    width: 300px;
   }
 
   .footer-grid {
@@ -142,5 +162,23 @@
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-main {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .footer-brand {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-logo-frame {
+    width: 320px;
   }
 }

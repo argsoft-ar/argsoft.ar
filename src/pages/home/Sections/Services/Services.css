@@ -70,11 +70,12 @@
 }
 
 .services-title {
+  font-family: var(--font-heading);
   font-size: 3.5rem;
-  font-weight: 900;
+  font-weight: 400;
   color: var(--text-color);
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
 }
 
 .services-text {
@@ -87,10 +88,92 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
+  grid-auto-rows: 1fr;
+  align-items: stretch;
   width: 100%;
-  justify-items: center;
   position: relative;
   z-index: 1;
+}
+
+.cards-container__item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.cards-swipe-hint {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .services-content {
+    width: 100%;
+  }
+
+  /* Full-bleed carousel: cancels the section's 20px side padding */
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    grid-auto-rows: unset;
+    gap: 16px;
+    width: auto;
+    margin-inline: -20px;
+    padding: 10px 20px 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 20px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .cards-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cards-container__item {
+    flex: 0 0 85%;
+    width: auto;
+    scroll-snap-align: start;
+  }
+
+  .cards-swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: -30px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted);
+    position: relative;
+    z-index: 1;
+  }
+
+  .cards-swipe-hint__icon {
+    animation: cards-swipe-hint-nudge 1.4s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cards-swipe-hint__icon {
+      animation: none;
+    }
+  }
+}
+
+@keyframes cards-swipe-hint-nudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
 }
 
 @media (min-width: 768px) {
