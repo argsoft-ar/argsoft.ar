@@ -24,6 +24,7 @@
   transition: 1s;
   cursor: pointer;
   transition: transform 0.3s;
+  gap: 10px;
 }
 
 .navbar-logo:hover {
@@ -42,7 +43,7 @@
 
 .navbar-logo-text {
   font-family: var(--font-heading);
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 400;
   text-transform: uppercase;
   color: var(--text-color);
@@ -250,7 +251,7 @@
 
 .navbar-logo-text-mobile {
   font-family: var(--font-heading);
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 400;
   text-transform: uppercase;
   color: var(--text-color);
