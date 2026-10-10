@@ -52,10 +52,11 @@
 }
 
 .work-process-title {
+  font-family: var(--font-heading);
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 400;
   color: var(--text-color);
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   line-height: 1.05;
 }
 
@@ -139,8 +140,9 @@
 }
 
 .timeline-card__title {
+  font-family: var(--font-heading);
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--text-color);
   margin: 0;
 }

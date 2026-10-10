@@ -58,11 +58,12 @@
 }
 
 .about-title {
+  font-family: var(--font-heading);
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 400;
   color: var(--text-color);
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   max-width: 800px;
 }
 
@@ -93,10 +94,11 @@
 }
 
 .about-team__title {
+  font-family: var(--font-heading);
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 400;
   color: var(--text-color);
-  letter-spacing: -0.01em;
+  letter-spacing: 0.02em;
 }
 
 .about-team__grid {
@@ -181,10 +183,11 @@
 }
 
 .about-why__title {
+  font-family: var(--font-heading);
   font-size: 1.5rem;
-  font-weight: 800;
+  font-weight: 400;
   color: var(--text-color);
-  letter-spacing: -0.01em;
+  letter-spacing: 0.02em;
 }
 
 .about-why__grid {
@@ -220,8 +223,9 @@
 }
 
 .why-card__title {
+  font-family: var(--font-heading);
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--text-color);
   line-height: 1.3;
 }

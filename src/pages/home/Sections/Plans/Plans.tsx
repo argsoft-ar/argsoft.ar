@@ -71,11 +71,11 @@ export default function Plans() {
             return (
               <div
                 key={plan.id}
-                className={
+                className={`plans-grid__item ${
                   inView
                     ? `anim-scale-in anim-delay-${Math.min(index + 3, 5)}`
                     : "anim-hidden"
-                }
+                }`}
               >
                 <PlanCard
                   icon={IconComponent}

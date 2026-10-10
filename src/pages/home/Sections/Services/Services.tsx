@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import "./Services.css";
 import Cards from "../../../../components/Cards/Cards";
 import servicesData from "../../../../data/services.json";
@@ -26,11 +27,11 @@ export default function Services() {
           {servicesData.services.map((service, index) => (
             <div
               key={service.title}
-              className={
+              className={`cards-container__item ${
                 inView
                   ? `anim-scale-in anim-delay-${Math.min(index + 1, 5)}`
                   : "anim-hidden"
-              }
+              }`}
             >
               <Cards
                 icon={service.icon}
@@ -42,6 +43,14 @@ export default function Services() {
             </div>
           ))}
         </div>
+        <p className="cards-swipe-hint">
+          Deslizar
+          <ArrowRight
+            className="cards-swipe-hint__icon"
+            size={16}
+            aria-hidden="true"
+          />
+        </p>
       </div>
     </div>
   );
