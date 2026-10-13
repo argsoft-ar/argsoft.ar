@@ -1,6 +1,6 @@
 import "./Hero.css";
 import Button from "../../../../components/Buttons/Button";
-import { ArrowRight, User } from "lucide-react";
+import { ArrowDown, ArrowRight, User } from "lucide-react";
 import { useInView } from "../../../../hooks/useInView";
 import { useTilt } from "../../../../hooks/useTilt";
 import ElementBg from "../../../../components/ElementBg/ElementBg";
@@ -89,7 +89,7 @@ export default function Hero() {
         className={`hero-scroll${inView ? " anim-fade-in anim-delay-6" : " anim-hidden"}`}
         aria-label="Ir a la siguiente sección"
       >
-        <span className="hero-scroll-line" />
+        <ArrowDown className="hero-scroll-arrow" size={24} aria-hidden="true" />
       </a>
     </section>
   );
