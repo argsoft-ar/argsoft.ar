@@ -31,25 +31,14 @@
   display: contents;
 }
 
-.hero-logo {
-  order: 1;
-}
-
-.hero-title {
-  order: 2;
-}
-
 .hero-lead,
 .hero-points {
   order: 3;
 }
 
-.container-buttons {
-  order: 4;
-}
-
 /* ===== Logo ===== */
 .hero-logo {
+  order: 1;
   --rx: 0deg;
   --ry: 0deg;
   --mx: 50;
@@ -66,7 +55,7 @@
   -webkit-user-select: none;
 }
 
-/* Halo: el centro sigue al cursor (--mx/--my relativos al logo; el halo mide 240%) */
+/* Halo que sigue al cursor, con posición relativa al logo; el halo mide 240% */
 .hero-logo::before {
   content: "";
   position: absolute;
@@ -125,6 +114,7 @@
 
 /* ===== Texto ===== */
 .hero-title {
+  order: 2;
   font-family: var(--font-heading);
   font-size: clamp(2.75rem, 5.5vw, 5rem);
   font-weight: 400;
@@ -171,6 +161,7 @@
 
 /* ===== Botones ===== */
 .container-buttons {
+  order: 4;
   display: flex;
   flex-direction: column;
   gap: 1rem;

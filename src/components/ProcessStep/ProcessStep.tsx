@@ -38,14 +38,18 @@ export default function ProcessStep({
   durationLabel = "Duración",
   detailsLabel = "Qué hacemos",
   deliverablesLabel = "Entregables",
-}: ProcessStepProps) {
+}: Readonly<ProcessStepProps>) {
   const { ref, inView } = useInView();
+  const activeClass = isActive ? " process-step--active" : "";
+  const animationClass = inView
+    ? ` anim-${animation} anim-delay-${delay}`
+    : " anim-hidden";
 
   return (
     <li
       id={id}
       ref={ref as RefObject<HTMLLIElement>}
-      className={`process-step${isActive ? " process-step--active" : ""}${inView ? ` anim-${animation} anim-delay-${delay}` : " anim-hidden"}`}
+      className={`process-step${activeClass}${animationClass}`}
     >
       <span className="process-step__marker" aria-hidden="true">
         {number}

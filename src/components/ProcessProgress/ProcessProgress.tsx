@@ -16,13 +16,19 @@ export interface ProcessProgressProps {
   className?: string;
 }
 
+function getItemStateClass(isActive: boolean, isDone: boolean): string {
+  if (isActive) return " process-progress__item--active";
+  if (isDone) return " process-progress__item--done";
+  return "";
+}
+
 export default function ProcessProgress({
   items,
   activeIndex,
   onSelect,
   ariaLabel = "Pasos del proceso",
   className = "",
-}: ProcessProgressProps) {
+}: Readonly<ProcessProgressProps>) {
   const { ref, inView } = useInView();
 
   return (
@@ -35,11 +41,7 @@ export default function ProcessProgress({
         {items.map((item, index) => {
           const isActive = index === activeIndex;
           const isDone = index < activeIndex;
-          const state = isActive
-            ? " process-progress__item--active"
-            : isDone
-              ? " process-progress__item--done"
-              : "";
+          const state = getItemStateClass(isActive, isDone);
 
           return (
             <li key={item.id} className={`process-progress__item${state}`}>
