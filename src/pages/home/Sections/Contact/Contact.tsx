@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { FormEvent } from "react";
 import "./Contact.css";
 import { useInView } from "../../../../hooks/useInView";
+import { getWhatsAppUrl } from "../../../../data/contact";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -14,19 +15,18 @@ export default function Contact() {
     if (!name || !message) return;
 
     const text = `¡Hola! Soy ${name}. ${message} Me gustaría obtener una consulta gratuita y un presupuesto para mi proyecto. ¿Podemos hablar?`;
-    const encoded = encodeURIComponent(text);
-    window.open(
-      `https://wa.me/5491173643037?text=${encoded}`,
-      "_blank",
-      "noopener,noreferrer",
-    );
+    window.open(getWhatsAppUrl(text), "_blank", "noopener,noreferrer");
 
     setName("");
     setMessage("");
   };
 
   return (
-    <section className="contact-section" id="contacto">
+    <section
+      className="contact-section"
+      id="contacto"
+      aria-labelledby="contacto-title"
+    >
       <div className="contact-bg-text" aria-hidden="true">
         CONTACTO
       </div>
@@ -41,6 +41,7 @@ export default function Contact() {
             HABLEMOS
           </span>
           <h2
+            id="contacto-title"
             className={`contact-title${inView ? " anim-fade-up anim-delay-2" : " anim-hidden"}`}
           >
             ¿Listo para escalar tu negocio?
@@ -64,6 +65,8 @@ export default function Contact() {
               <input
                 id="contact-name"
                 type="text"
+                name="name"
+                autoComplete="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Tu nombre"

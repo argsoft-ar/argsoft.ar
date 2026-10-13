@@ -50,7 +50,11 @@ export default function AboutUs() {
   const { ref, inView } = useInView();
 
   return (
-    <section className="about-container" id="nosotros">
+    <section
+      className="about-container"
+      id="nosotros"
+      aria-labelledby="nosotros-title"
+    >
       <div
         className="about-content"
         ref={ref as React.RefObject<HTMLDivElement>}
@@ -60,7 +64,7 @@ export default function AboutUs() {
           className={`about-header${inView ? " anim-fade-up anim-delay-1" : " anim-hidden"}`}
         >
           <span className="about-tag">Sobre Nosotros</span>
-          <h2 className="about-title">
+          <h2 id="nosotros-title" className="about-title">
             Ingeniería, diseño y atención al detalle para impulsar tu negocio.
           </h2>
         </header>
@@ -94,7 +98,9 @@ export default function AboutUs() {
           <div className="about-team__grid">
             {teamMembers.map((member) => (
               <article key={member.name} className="team-card">
-                <div className="team-card__avatar">{member.initials}</div>
+                <div className="team-card__avatar" aria-hidden="true">
+                  {member.initials}
+                </div>
                 <div className="team-card__info">
                   <h4 className="team-card__name">{member.name}</h4>
                   <span className="team-card__role">{member.role}</span>
@@ -113,7 +119,7 @@ export default function AboutUs() {
           <div className="about-why__grid">
             {whyChooseUs.map((item) => (
               <div key={item.title} className="why-card">
-                <div className="why-card__icon">
+                <div className="why-card__icon" aria-hidden="true">
                   <item.icon size={24} />
                 </div>
                 <div className="why-card__content">

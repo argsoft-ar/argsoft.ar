@@ -71,7 +71,11 @@ export default function Projects() {
   };
 
   return (
-    <section className="projects-section" id="proyectos">
+    <section
+      className="projects-section"
+      id="proyectos"
+      aria-labelledby="proyectos-title"
+    >
       <div
         className="projects-inner"
         ref={ref as React.RefObject<HTMLDivElement>}
@@ -81,7 +85,9 @@ export default function Projects() {
         >
           <span className="projects-label">Nuestro Trabajo</span>
           <div className="projects-header-row">
-            <h2 className="projects-title">Proyectos Destacados</h2>
+            <h2 id="proyectos-title" className="projects-title">
+              Proyectos Destacados
+            </h2>
             <p className="projects-subtitle">
               Soluciones digitales que transforman ideas en experiencias reales.
             </p>
@@ -141,7 +147,8 @@ export default function Projects() {
                   type="button"
                   className={`projects-dot${activeIndex === index ? " projects-dot--active" : ""}`}
                   onClick={() => scrollToCard(index)}
-                  aria-label={`Ir al proyecto ${index + 1}`}
+                  aria-label={`Ir al proyecto ${index + 1}: ${project.title}`}
+                  aria-current={activeIndex === index ? "true" : undefined}
                 />
               ))}
             </div>

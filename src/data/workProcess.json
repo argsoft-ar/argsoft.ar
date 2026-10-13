@@ -2,27 +2,89 @@
   "steps": [
     {
       "id": 1,
-      "number": "01",
+      "number": "1",
       "title": "Descubrimiento",
-      "description": "Analizamos tus objetivos, audiencia y requisitos técnicos."
+      "description": "Analizamos tus objetivos, audiencia y requisitos técnicos.",
+      "summary": "Analizamos tus objetivos, audiencia y requisitos técnicos.",
+      "duration": "1 semana",
+      "icon": "Search",
+      "details": [
+        "Reunión inicial sin costo para entender tu idea",
+        "Relevamiento de objetivos, usuarios y competencia",
+        "Definición del alcance y los requisitos técnicos",
+        "Presupuesto y cronograma cerrados"
+      ],
+      "deliverables": [
+        "Documento de alcance",
+        "Estimación de costos y tiempos",
+        "Plan de trabajo"
+      ]
     },
     {
       "id": 2,
-      "number": "02",
+      "number": "2",
       "title": "Diseño",
-      "description": "Creamos wireframes y prototipos UI de alta fidelidad para aprobación."
+      "description": "Creamos wireframes y prototipos UI de alta fidelidad para aprobación.",
+      "summary": "Creamos wireframes y prototipos UI de alta fidelidad para aprobación.",
+      "duration": "1 a 2 semanas",
+      "icon": "PenTool",
+      "details": [
+        "Arquitectura de la información y flujos de navegación",
+        "Wireframes de las pantallas principales",
+        "Prototipo UI de alta fidelidad",
+        "Ajustes a partir de tu feedback hasta aprobarlo"
+      ],
+      "deliverables": ["Prototipo navegable", "Guía de estilos"]
     },
     {
       "id": 3,
-      "number": "03",
+      "number": "3",
       "title": "Desarrollo",
-      "description": "Código limpio con actualizaciones regulares y demos funcionales."
+      "description": "Código limpio con actualizaciones regulares y demos funcionales.",
+      "summary": "Código limpio con actualizaciones regulares y demos funcionales.",
+      "duration": "4 a 10 semanas",
+      "icon": "Code",
+      "details": [
+        "Sprints cortos con demo semanal",
+        "Código limpio y revisado",
+        "Integraciones, backend y APIs",
+        "Entorno de pruebas accesible para vos"
+      ],
+      "deliverables": [
+        "Avances demostrables cada semana",
+        "Acceso al repositorio"
+      ]
     },
     {
       "id": 4,
-      "number": "04",
-      "title": "Despliegue",
-      "description": "Testing, lanzamiento final y soporte post-lanzamiento continuo."
+      "number": "4",
+      "title": "Pruebas y despliegue",
+      "description": "Testing, lanzamiento final y puesta en producción.",
+      "summary": "Testing, lanzamiento final y puesta en producción.",
+      "duration": "1 a 2 semanas",
+      "icon": "Rocket",
+      "details": [
+        "Testing funcional y de rendimiento",
+        "Corrección de bugs",
+        "Puesta en producción",
+        "Capacitación para que uses tu producto con confianza"
+      ],
+      "deliverables": ["Sitio o app en producción", "Documentación"]
+    },
+    {
+      "id": 5,
+      "number": "5",
+      "title": "Soporte y evolución",
+      "description": "Monitoreo, mantenimiento y mejoras continuas después del lanzamiento.",
+      "summary": "Monitoreo, mantenimiento y mejoras continuas después del lanzamiento.",
+      "duration": "Continuo",
+      "icon": "LifeBuoy",
+      "details": [
+        "Monitoreo y mantenimiento",
+        "Mejoras continuas según el uso real",
+        "Soporte directo por WhatsApp"
+      ],
+      "deliverables": ["Informe de estado", "Plan de mejoras"]
     }
   ]
 }

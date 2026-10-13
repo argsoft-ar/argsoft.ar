@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { optimizeImageUrl } from "../../../../utils/cloudinary";
 
 interface ProjectCardProps {
   readonly title: string;
@@ -29,9 +30,17 @@ export default function ProjectCard({
       className={className}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      aria-label={`Ver proyecto: ${title}`}
+      aria-label={`Ver proyecto ${title} (se abre en una pestaña nueva)`}
     >
-      <img src={image} alt={title} className="project-card__img" />
+      <img
+        src={optimizeImageUrl(image, 900)}
+        alt={`Captura del sitio web de ${title}`}
+        className="project-card__img"
+        width={900}
+        height={600}
+        loading="lazy"
+        decoding="async"
+      />
       <div className="project-card__overlay" />
       <div className="project-card__content">
         <div className="project-card__tech-row">

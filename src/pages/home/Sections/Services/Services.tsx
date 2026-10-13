@@ -8,7 +8,11 @@ export default function Services() {
   const { ref, inView } = useInView();
 
   return (
-    <div className="services-container" id="servicios">
+    <section
+      className="services-container"
+      id="servicios"
+      aria-labelledby="servicios-title"
+    >
       <div
         className="services-content"
         ref={ref as React.RefObject<HTMLDivElement>}
@@ -17,7 +21,9 @@ export default function Services() {
           className={`introduction-container${inView ? " anim-fade-up anim-delay-1" : " anim-hidden"}`}
         >
           <span className="services-introduction">Nuestros Servicios</span>
-          <h2 className="services-title">Expertise y Calidad</h2>
+          <h2 id="servicios-title" className="services-title">
+            Servicios de desarrollo de software a medida
+          </h2>
           <p className="services-text">
             Nos centramos en brindar soluciones eficientes y rápidas para
             satisfacer las necesidades de nuestros clientes.
@@ -52,6 +58,6 @@ export default function Services() {
           />
         </p>
       </div>
-    </div>
+    </section>
   );
 }

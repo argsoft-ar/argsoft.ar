@@ -23,7 +23,11 @@ export default function Plans() {
   };
 
   return (
-    <section className="plans-container" id="planes">
+    <section
+      className="plans-container"
+      id="planes"
+      aria-labelledby="planes-title"
+    >
       <div
         className="plans-content"
         ref={ref as React.RefObject<HTMLDivElement>}
@@ -33,7 +37,7 @@ export default function Plans() {
           className={`plans-header${inView ? " anim-fade-up anim-delay-1" : " anim-hidden"}`}
         >
           <span className="plans-tag">Nuestros Planes</span>
-          <h2 className="plans-title">Soluciones para cada etapa</h2>
+          <h2 id="planes-title" className="plans-title">Soluciones para cada etapa</h2>
           <p className="plans-subtitle">
             Elegí el plan que mejor se adapte a tu negocio. Todos incluyen
             diseño profesional, velocidad y soporte continuo.
