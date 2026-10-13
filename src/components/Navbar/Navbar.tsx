@@ -31,7 +31,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" aria-label="Navegación principal">
       <div className="navbar-desktop">
         <div className="navbar-links-bg anim-fade-down">
           <div className="navbar-logo">
@@ -45,8 +45,15 @@ export default function Navbar() {
                 gap: "1rem",
               }}
             >
-              <img className="navbar-logo-img" src={logo} alt="Argsoft Logo" />
-              <h1 className="navbar-logo-text">Argsoft</h1>
+              <img
+                className="navbar-logo-img"
+                src={logo}
+                alt=""
+                width={45}
+                height={45}
+                decoding="async"
+              />
+              <span className="navbar-logo-text">Argsoft</span>
             </a>
           </div>
           <div className="link-container">
@@ -64,6 +71,7 @@ export default function Navbar() {
           <Button
             text="Contactános"
             icon={PhoneIcon}
+            className="navbar-cta"
             action={{ type: "scroll", targetId: "contacto" }}
           />
         </div>
@@ -74,14 +82,26 @@ export default function Navbar() {
             <a
               href="#inicio"
               onClick={(e) => handleLinkClick(e, "inicio")}
-              style={{ textDecoration: "none" }}
+              className="navbar-logo-mobile-link"
             >
-              <h1 className="navbar-logo-text-mobile">ARGSOFT</h1>
+              <img
+                className="navbar-logo-mobile-img"
+                src={logo}
+                alt=""
+                width={40}
+                height={40}
+                decoding="async"
+              />
+              <span className="navbar-logo-text-mobile">ARGSOFT</span>
             </a>
           </div>
           <button
+            type="button"
             className="navbar-burger"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Abrir menú"
+            aria-expanded={menuOpen}
+            aria-controls="navbar-mobile-menu"
           >
             <Menu size={30} />
           </button>
@@ -94,11 +114,17 @@ export default function Navbar() {
           />
         )}
 
-        <div className={`navbar-mobile-menu${menuOpen ? " open" : ""}`}>
+        <div
+          id="navbar-mobile-menu"
+          className={`navbar-mobile-menu${menuOpen ? " open" : ""}`}
+          inert={!menuOpen}
+        >
           <div className="navbar-mobile-menu-header">
             <button
+              type="button"
               className="navbar-mobile-close"
               onClick={() => setMenuOpen(false)}
+              aria-label="Cerrar menú"
             >
               <X size={25} />
             </button>

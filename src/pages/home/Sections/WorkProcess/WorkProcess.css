@@ -2,10 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;
+  padding: 80px var(--margin-mobile);
   background-color: var(--background-secondary);
   position: relative;
-  overflow: hidden;
+  /* clip (no hidden) para no romper el position: sticky del nav */
+  overflow: clip;
 }
 
 .work-process-section::before {
@@ -13,8 +14,9 @@
   position: absolute;
   top: -10px;
   right: -20px;
-  font-size: 12vw;
+  font-family: var(--font-body);
   font-weight: 900;
+  font-size: 12vw;
   color: var(--text-color);
   opacity: 0.03;
   pointer-events: none;
@@ -25,6 +27,38 @@
   white-space: nowrap;
 }
 
+/* Halo que respira */
+.work-process-section::after {
+  content: "";
+  position: absolute;
+  top: -8%;
+  left: -12%;
+  width: min(80vw, 800px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--secondary-color) 14%, transparent) 0%,
+    transparent 65%
+  );
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+  animation: workProcessBreathe 10s ease-in-out infinite;
+}
+
+@keyframes workProcessBreathe {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
 .work-process-content {
   display: flex;
   flex-direction: column;
@@ -32,9 +66,16 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  gap: 20px;
+  gap: 3rem;
   position: relative;
   z-index: 1;
+}
+
+.work-process-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 .work-process-label {
@@ -53,185 +94,93 @@
 
 .work-process-title {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 400;
   color: var(--text-color);
-  letter-spacing: 0.02em;
-  line-height: 1.05;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+  text-transform: uppercase;
+  text-wrap: balance;
 }
 
 .work-process-subtitle {
-  font-size: 1rem;
+  max-width: 52ch;
+  font-size: 1.05rem;
   color: var(--text-muted);
   line-height: 1.6;
-  margin-bottom: 20px;
 }
 
-/* Timeline container */
-.work-process-timeline {
-  position: relative;
+/* Lista de pasos: línea de tiempo vertical en mobile */
+.work-process-layout {
   width: 100%;
+}
+
+.work-process-steps {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 1.5rem;
   padding-left: 50px;
+  list-style: none;
 }
 
-/* Vertical line - mobile (left side) */
-.work-process-timeline::before {
+.work-process-steps::before {
   content: "";
   position: absolute;
   left: 17px;
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: var(--border-color, #e5e7eb);
+  background-color: var(--outline-variant);
 }
 
-/* Timeline item */
-.timeline-item {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
+.work-process-cta {
+  width: 100%;
+  max-width: 320px;
 }
 
-/* Timeline circle */
-.timeline-circle {
-  position: absolute;
-  left: -50px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background-color: var(--background-secondary);
-  border: 3px solid currentColor;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--text-color);
-  z-index: 2;
-  flex-shrink: 0;
+.work-process-cta .generic-btn {
+  width: 100%;
 }
 
-/* Timeline card - neo-brutalist styling */
-.timeline-card {
-  width: 90%;
-  min-height: 120px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  background-color: var(--background-secondary);
-  border-radius: 4px;
-  padding: 24px;
-  border: 2px solid var(--text-color);
-  box-shadow: var(--hard-shadow, 4px 4px 0 var(--text-color));
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
-}
-
-.timeline-card:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 7px 7px 0 var(--secondary-color);
-}
-
-.timeline-card__title {
-  font-family: var(--font-heading);
-  font-size: 1.1rem;
-  font-weight: 400;
-  color: var(--text-color);
-  margin: 0;
-}
-
-.timeline-card__description {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* Desktop styles */
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .work-process-section {
-    padding: 80px 40px;
+    padding: 120px var(--margin-desktop);
   }
 
-  .work-process-title {
-    font-size: 2.8rem;
+  .work-process-content {
+    gap: 4rem;
   }
 
-  .work-process-subtitle {
-    font-size: 1.1rem;
-    margin-bottom: 40px;
+  .work-process-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, 280px) 1fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: start;
   }
 
-  /* Timeline - centered for zigzag */
-  .work-process-timeline {
+  .work-process-steps {
+    gap: 2rem;
     padding-left: 0;
-    gap: 32px;
   }
 
-  /* Vertical line - desktop (center) */
-  .work-process-timeline::before {
-    left: 50%;
-    transform: translateX(-50%);
+  .work-process-steps::before {
+    content: none;
   }
 
-  /* Timeline item - zigzag base */
-  .timeline-item {
-    width: 50%;
-    gap: 24px;
+  .work-process-cta {
+    width: fit-content;
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-process-section::after {
+    animation: none;
+    opacity: 0.7;
   }
 
-  /* Left items (odd: 1, 3, 5) - card on left side */
-  .timeline-item--left {
-    align-self: flex-start;
-    flex-direction: row-reverse;
-    padding-right: 40px;
-  }
-
-  .timeline-item--left .timeline-circle {
-    left: auto;
-    right: -18px;
-  }
-
-  .timeline-item--left .timeline-card {
-    text-align: right;
-  }
-
-  /* Right items (even: 2, 4) - card on right side */
-  .timeline-item--right {
-    align-self: flex-end;
-    padding-left: 40px;
-  }
-
-  .timeline-item--right .timeline-circle {
-    left: -18px;
-  }
-
-  .timeline-item--right .timeline-card {
-    text-align: left;
-  }
-
-  .timeline-card {
-    width: 350px;
-    min-height: 140px;
-    padding: 28px;
-  }
-
-  .timeline-card__title {
-    font-size: 1.2rem;
-  }
-
-  .timeline-card__description {
-    max-width: 280px;
-  }
-
-  .timeline-item--left .timeline-card__description {
-    margin-left: auto;
+  .work-process-section [class*="anim-"] {
+    animation: none;
   }
 }

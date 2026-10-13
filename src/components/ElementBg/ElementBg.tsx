@@ -2,15 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import "./ElementBg.css";
 
 interface BgElement {
-  type:
-    | "grid"
-    | "orb"
-    | "ring"
-    | "diamond"
-    | "cross"
-    | "dot"
-    | "line"
-    | "bracket";
+  type: "grid" | "orb" | "ring" | "diamond" | "dot";
   className: string;
   parallaxFactor: number;
   style?: React.CSSProperties;
@@ -31,11 +23,6 @@ const BG_ELEMENTS: BgElement[] = [
     className: "el-bg-orb el-bg-orb--right",
     parallaxFactor: 0.02,
   },
-  {
-    type: "orb",
-    className: "el-bg-orb el-bg-orb--center",
-    parallaxFactor: 0.012,
-  },
 
   // Rings
   {
@@ -48,11 +35,6 @@ const BG_ELEMENTS: BgElement[] = [
     className: "el-bg-ring el-bg-ring--bottom",
     parallaxFactor: 0.025,
   },
-  {
-    type: "ring",
-    className: "el-bg-ring el-bg-ring--mid",
-    parallaxFactor: 0.04,
-  },
 
   // Diamonds
   {
@@ -60,50 +42,10 @@ const BG_ELEMENTS: BgElement[] = [
     className: "el-bg-diamond el-bg-diamond--a",
     parallaxFactor: 0.035,
   },
-  {
-    type: "diamond",
-    className: "el-bg-diamond el-bg-diamond--b",
-    parallaxFactor: 0.045,
-  },
-
-  // Crosses
-  {
-    type: "cross",
-    className: "el-bg-cross el-bg-cross--a",
-    parallaxFactor: 0.05,
-  },
-  {
-    type: "cross",
-    className: "el-bg-cross el-bg-cross--b",
-    parallaxFactor: 0.06,
-  },
-  {
-    type: "cross",
-    className: "el-bg-cross el-bg-cross--c",
-    parallaxFactor: 0.045,
-  },
 
   // Dots
   { type: "dot", className: "el-bg-dot el-bg-dot--a", parallaxFactor: 0.07 },
   { type: "dot", className: "el-bg-dot el-bg-dot--b", parallaxFactor: 0.06 },
-  { type: "dot", className: "el-bg-dot el-bg-dot--c", parallaxFactor: 0.08 },
-  { type: "dot", className: "el-bg-dot el-bg-dot--d", parallaxFactor: 0.055 },
-
-  // Lines
-  { type: "line", className: "el-bg-line el-bg-line--a", parallaxFactor: 0.03 },
-  { type: "line", className: "el-bg-line el-bg-line--b", parallaxFactor: 0.04 },
-
-  // Brackets
-  {
-    type: "bracket",
-    className: "el-bg-bracket el-bg-bracket--a",
-    parallaxFactor: 0.035,
-  },
-  {
-    type: "bracket",
-    className: "el-bg-bracket el-bg-bracket--b",
-    parallaxFactor: 0.04,
-  },
 ];
 
 export default function ElementBg() {

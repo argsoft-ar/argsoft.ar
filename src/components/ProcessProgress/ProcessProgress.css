@@ -1,0 +1,133 @@
+.process-progress {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .process-progress {
+    position: sticky;
+    top: 120px;
+    align-self: start;
+    display: block;
+  }
+
+  .process-progress__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+
+  .process-progress__item {
+    --dot-size: 12px;
+    --dot-offset: 0.45rem;
+    position: relative;
+    padding: 0 0 1.75rem 2rem;
+  }
+
+  .process-progress__item:last-child {
+    padding-bottom: 0;
+  }
+
+  /* Tramo de línea (pista y relleno) hacia el siguiente punto */
+  .process-progress__item:not(:last-child)::before,
+  .process-progress__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: calc(var(--dot-size) / 2 - 1px);
+    top: calc(var(--dot-offset) + var(--dot-size));
+    bottom: calc(var(--dot-offset) * -1);
+    width: 2px;
+  }
+
+  .process-progress__item:not(:last-child)::before {
+    background-color: var(--outline-variant);
+  }
+
+  .process-progress__item:not(:last-child)::after {
+    background-color: var(--secondary-color);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease;
+  }
+
+  .process-progress__item--done:not(:last-child)::after {
+    transform: scaleY(1);
+  }
+
+  .process-progress__button {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+  }
+
+  /* Punto */
+  .process-progress__button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: var(--dot-offset);
+    z-index: 1;
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border: 2px solid var(--outline-variant);
+    background-color: var(--background-secondary);
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .process-progress__button:hover {
+    color: var(--text-color);
+  }
+
+  .process-progress__item--done .process-progress__button::before,
+  .process-progress__item--active .process-progress__button::before {
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+  }
+
+  .process-progress__item--active .process-progress__button::before {
+    box-shadow: 0 0 0 4px
+      color-mix(in srgb, var(--secondary-color) 20%, transparent);
+  }
+
+  .process-progress__number,
+  .process-progress__title {
+    font-family: var(--font-heading);
+    line-height: 1.1;
+  }
+
+  .process-progress__number {
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+  }
+
+  .process-progress__title {
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .process-progress__item--active .process-progress__button {
+    color: var(--text-color);
+  }
+
+  .process-progress__item--active .process-progress__number {
+    color: var(--secondary-color);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .process-progress__item::after,
+  .process-progress__button,
+  .process-progress__button::before {
+    transition: none;
+  }
+}

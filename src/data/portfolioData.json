@@ -18,11 +18,11 @@
     },
     {
       "id": 3,
-      "title": "Campo Fertil",
-      "description": "Diseño y desarrollo web para Campo Fértil S.R.L, una empresa agroindustrial líder en producción de granos, venta de agroquímicos y servicios agrícolas.",
-      "technologies": ["React.js", "CSS", "Vite", "JSON"],
-      "image": "https://res.cloudinary.com/deamcrkgb/image/upload/v1749693480/campo_fertil_ahl3lw.webp",
-      "url": "https://campofertilreact.netlify.app/"
+      "title": "Moya Propiedades",
+      "description": "Diseño y desarrollo web para Moya Propiedades, una inmobiliaria especializada en la venta y alquiler de propiedades.",
+      "technologies": ["React", "CSS", "Vite", "TypeScript"],
+      "image": "https://res.cloudinary.com/dry6jcgfn/image/upload/v1791858694/Captura_de_pantalla_2026-10-12_233117_eqsv4s.png",
+      "url": "https://www.moyapropiedades.com.ar/"
     },
 
     {
