@@ -16,7 +16,10 @@
       "source": "/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
         { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
         {
           "key": "Permissions-Policy",
@@ -36,17 +39,23 @@
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/fonts/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
-      "source": "/(favicon\\.svg|icons\\.svg|logo-y-variables-01\\.ico|brand\\.png|og-image\\.png|icon-192\\.png|icon-512\\.png|apple-touch-icon\\.png)",
+      "source": "/(favicon\\.svg|icons\\.svg|logo-y-variables-01\\.ico|brand\\.png|og-image\\.png|icon-192\\.png|icon-512\\.png|apple-touch-icon\\.png|brand_ico\\.svg|brand_ico\\.ico)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -57,13 +66,19 @@
     {
       "source": "/(robots\\.txt|sitemap\\.xml)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
       ]
     },
     {
       "source": "/site.webmanifest",
       "headers": [
-        { "key": "Content-Type", "value": "application/manifest+json; charset=utf-8" },
+        {
+          "key": "Content-Type",
+          "value": "application/manifest+json; charset=utf-8"
+        },
         { "key": "Cache-Control", "value": "public, max-age=86400" }
       ]
     }
