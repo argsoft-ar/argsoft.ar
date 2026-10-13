@@ -19,7 +19,7 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/argsoft-ar/",
+    href: "https://www.linkedin.com/company/argsoft-ar/",
     Icon: FaLinkedinIn,
   },
   { label: "GitHub", href: "https://github.com/argsoft-ar", Icon: FaGithub },
@@ -33,12 +33,20 @@ export default function Footer() {
       <div className="footer-main">
         <div className="footer-brand">
           <div className="footer-logo-frame">
-            <img src={logo} alt="Argsoft" className="footer-logo" />
+            <img
+              src={logo}
+              alt="ARGSOFT, desarrollo de software en Argentina"
+              className="footer-logo"
+              width={800}
+              height={800}
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
 
         <div className="footer-grid">
-          <div>
+          <nav aria-label="Navegación del pie de página">
             <p className="footer-col-label">Navegación</p>
             <ul className="footer-col-links">
               {navLinks.map(({ label, id }) => (
@@ -49,7 +57,7 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           <div>
             <p className="footer-col-label">Contacto</p>
@@ -76,7 +84,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="footer-social-link"
                   >
-                    <Icon size={20} />
+                    <Icon size={20} aria-hidden="true" />
                     {label}
                   </a>
                 </li>

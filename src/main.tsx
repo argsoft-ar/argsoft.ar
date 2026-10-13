@@ -1,16 +1,25 @@
 import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./index.css";
 import "./styles/animations.css";
 import App from "./App.tsx";
 
-createRoot(document.getElementById("root")!).render(
+const container = document.getElementById("root")!;
+
+const app = (
   <StrictMode>
     <BrowserRouter>
       <App />
       <SpeedInsights />
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 );
+
+// El HTML prerenderizado en build se hidrata; en dev el contenedor está vacío.
+if (container.hasChildNodes()) {
+  hydrateRoot(container, app);
+} else {
+  createRoot(container).render(app);
+}

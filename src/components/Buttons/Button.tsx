@@ -1,5 +1,8 @@
-import { type LucideIcon } from "lucide-react";
+import type { ComponentType } from "react";
 import "./Button.css";
+
+// Compatible con iconos de lucide-react y react-icons
+type ButtonIcon = ComponentType<{ size?: number; color?: string }>;
 
 type ButtonAction =
   | { type: "scroll"; targetId: string }
@@ -8,11 +11,12 @@ type ButtonAction =
   | { type: "custom"; onClick: () => void };
 
 interface ButtonProps {
-  text: string;
+  text?: string;
+  ariaLabel?: string;
   action: ButtonAction;
   backgroundColor?: string;
   textColor?: string;
-  icon?: LucideIcon;
+  icon?: ButtonIcon;
   iconPosition?: "left" | "right";
   iconSize?: number;
   className?: string;
@@ -20,6 +24,7 @@ interface ButtonProps {
 
 export default function Button({
   text,
+  ariaLabel,
   action,
   backgroundColor = "var(--secondary-color)",
   textColor = "var(--text-on-primary)",
@@ -50,7 +55,9 @@ export default function Button({
 
   return (
     <button
+      type="button"
       className={`generic-btn ${className}`}
+      aria-label={ariaLabel}
       onClick={handleClick}
       style={{
         backgroundColor,
@@ -60,7 +67,7 @@ export default function Button({
       {Icon && iconPosition === "left" && (
         <Icon size={iconSize} color={textColor} />
       )}
-      <span>{text}</span>
+      {text && <span>{text}</span>}
       {Icon && iconPosition === "right" && (
         <Icon size={iconSize} color={textColor} />
       )}
